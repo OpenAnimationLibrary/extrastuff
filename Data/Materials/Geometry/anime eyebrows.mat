@@ -1,0 +1,28 @@
+<MATERIALFILE>
+ProductVersion=17
+Release= PC
+<IMAGES>
+InstanceCropStyle=InsteadOfCache
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+<MATERIAL>
+<ATTRIBUTE>
+Name=Attribute
+AnimeEyebrows=TRUE
+</ATTRIBUTE>
+<FileInfo>
+CreatedBy=Ken Baer
+LastModifiedBy=Steffen
+</FileInfo>
+</MATERIAL>
+</MATERIALS>
+<OBJECTS>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=212
+</MATERIALFILE>

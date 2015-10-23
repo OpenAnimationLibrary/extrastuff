@@ -1,0 +1,3946 @@
+<MODELFILE>
+ProductVersion=17
+Release= PC
+<POSTEFFECTS>
+</POSTEFFECTS>
+<IMAGES>
+InstanceCropStyle=InsteadOfCache
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+</MATERIALS>
+<OBJECTS>
+<MODEL>
+Marker=0 1.59148
+<MESH>
+<PATCHES>
+</PATCHES>
+<NORMALS>
+</NORMALS>
+<ATTRS>
+</ATTRS>
+</MESH>
+End=0 0 103.767
+Rotate=0 0 0 1
+Length=103.767
+Radiosity=1
+<USERPROPERTY> User Properties
+<USERPROPERTY> Rig
+<USERPROPERTY> Setup
+<BOOL> Ik Arms Setup
+DefaultValue=FALSE
+Value=FALSE
+</BOOL>
+<BOOL> IK Legs Setup
+DefaultValue=FALSE
+Value=TRUE
+</BOOL>
+<BOOL> Basic Setup
+DefaultValue=FALSE
+Value=TRUE
+</BOOL>
+</USERPROPERTY>
+<PERCENT> Steady
+Type=Percentage
+FactorValue=100
+</PERCENT>
+<PERCENT> Balance
+Type=Percentage
+FactorValue=100
+Value=0
+</PERCENT>
+<PERCENT> Balance Rigid
+Type=Percentage
+FactorValue=100
+Value=0
+</PERCENT>
+<BOOL> Right Hand Lock
+DefaultValue=FALSE
+</BOOL>
+<BOOL> Left Hand Lock
+DefaultValue=FALSE
+</BOOL>
+</USERPROPERTY>
+<USERPROPERTY> Hands
+<PERCENT> Left Hand Clench
+Type=Percentage
+FactorValue=100
+</PERCENT>
+<PERCENT> Right Hand Clench
+Type=Percentage
+FactorValue=100
+</PERCENT>
+<BOOL> Show Fingers
+DefaultValue=FALSE
+Value=FALSE
+</BOOL>
+</USERPROPERTY>
+</USERPROPERTY>
+<BONES>
+<SEGMENT>
+Name=Root
+BoneColor=255 128 128 255
+Hidden=TRUE
+Start=0 -0.503899 0
+End=-4.60076e-006 -0.146153 103.746
+Rotate=-0.00172414 -2.21731e-008 3.82275e-011 0.999999
+Length=103.746
+<SEGMENT>
+Name=Steady Arms
+BoneColor=255 128 192 255
+Hidden=TRUE
+Start=-40.9146 89.665 0.614913
+End=-69.3252 90.0542 0.614913
+Rotate=-0.503413 -0.496564 0.496564 0.503413
+Length=28.4132
+<SEGMENT>
+Name=Steady Head And Spine
+BoneColor=128 0 64 255
+Hidden=TRUE
+Start=-40.1362 94.9191 0.614913
+End=-39.9416 120.8 0.614913
+Rotate=-0.707102 0.00265834 -0.00265828 0.707102
+Length=25.8816
+</SEGMENT>
+</SEGMENT>
+<NULLOBJECT>
+Name=Balance Feet Level
+Hidden=TRUE
+BoneColor=0 0 255 255
+Hidden=TRUE
+UserMoved=TRUE
+Start=1.58405e-006 0 -63.5605
+End=1.32412e-006 0 -51.49
+Rotate=0 -1.0767e-008 0 1
+Length=12.0705
+<NULLOBJECT>
+Name=Balance Right Foot
+Hidden=TRUE
+BoneColor=0 0 255 255
+Hidden=TRUE
+UserMoved=TRUE
+Start=-5.79 13.05 45.1011
+End=-5.79 13.05 57.1011
+Rotate=0 0 -1.21072e-008 1
+Length=12
+<SEGMENT>
+Name=Balance Base
+BoneColor=128 64 0 255
+Hidden=TRUE
+Start=-5.79 13.05 45.1011
+End=2.86102e-006 107.457 45.1011
+Rotate=-0.706775 0.021653 -0.021653 0.706775
+Length=94.5844
+<SEGMENT>
+Name=Balance Point
+BoneColor=0 128 0 255
+Hidden=TRUE
+Start=5.24521e-006 107.457 45.1011
+End=5.74 13.05 45.1011
+Rotate=-0.0214674 0.706781 -0.706781 0.0214656
+Length=94.5813
+Chained=TRUE
+</SEGMENT>
+</SEGMENT>
+</NULLOBJECT>
+<NULLOBJECT>
+Name=Balance Left Foot
+Hidden=TRUE
+BoneColor=0 0 255 255
+Hidden=TRUE
+UserMoved=TRUE
+Start=5.74 13.05 45.1011
+End=5.74 13.05 57.1011
+Rotate=0 0 -1.87254e-008 1
+Length=12
+</NULLOBJECT>
+<SEGMENT>
+Name=Balance Base Rigid
+BoneColor=128 64 0 255
+Hidden=TRUE
+Start=-5.79 13.05 62.9397
+End=2.86102e-006 107.457 62.9397
+Rotate=-0.706775 0.021653 -0.021653 0.706775
+Length=94.5844
+<SEGMENT>
+Name=Balance Point Rigid
+BoneColor=0 128 0 255
+Hidden=TRUE
+Start=5.24521e-006 107.457 62.9397
+End=5.73996 13.05 62.9397
+Rotate=-0.0214665 0.706781 -0.706781 0.0214662
+Length=94.5813
+Chained=TRUE
+</SEGMENT>
+</SEGMENT>
+</NULLOBJECT>
+<NULLOBJECT>
+Name=Balance Feet Center
+Hidden=TRUE
+BoneColor=0 0 255 255
+Hidden=TRUE
+UserMoved=TRUE
+End=0 0 12.0705
+Rotate=0 0 1.32786e-010 1
+Length=12.0705
+<NULLOBJECT>
+Name=Balance Base Aim
+Hidden=TRUE
+BoneColor=0 0 255 255
+Hidden=TRUE
+UserMoved=TRUE
+Start=0.346964 210.79 0
+End=0.327119 198.733 0.571999
+Rotate=0.690035 -0.0125488 0.0119673 0.723568
+Length=12.0705
+</NULLOBJECT>
+</NULLOBJECT>
+<NULLOBJECT>
+Name=Hips
+BoneColor=0 0 255 255
+UserMoved=TRUE
+Start=-1.3672e-008 107.457 0.312778
+End=-2.69136e-007 107.46 18.2276
+Rotate=-8.36837e-005 -7.12991e-009 5.60104e-010 1
+Length=17.9148
+<SEGMENT>
+Name=Back
+BoneColor=0 255 255 255
+Start=0 107.34 0.312778
+End=-8.23431e-006 118.712 0.312037
+Rotate=-0.70713 1.56246e-007 6.68224e-007 0.707084
+Length=11.3721
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Back2
+BoneColor=0 128 255 255
+Start=-1.18086e-008 121.569 0.270148
+End=1.87525e-007 141.152 -1.04999
+Rotate=-0.7305 3.59268e-009 -3.59268e-009 0.682913
+Length=19.6274
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Neck
+BoneColor=255 128 255 255
+Start=0 143.915 0
+End=9.08228e-005 152.677 0.296859
+Rotate=-0.695032 0.000124504 0.000121341 0.718979
+Length=8.76704
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Head
+BoneColor=0 255 0 255
+Start=0 153.696 0.21062
+End=0.000661164 187.413 0.846746
+Rotate=-0.700393 -0.00426468 -0.0043599 0.713732
+Length=33.723
+Manipulation=RotateOnly
+<LimitManipulators>
+Value=TRUE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Eye
+BoneColor=255 0 0 255
+Hidden=TRUE
+Start=-3.48635 164.785 9.99039
+End=2.8302 164.973 14.8306
+Rotate=-0.0105645 0.442555 0.00521387 0.896664
+Length=7.96
+</SEGMENT>
+<SEGMENT>
+Name=Left Eye
+BoneColor=255 0 0 255
+Hidden=TRUE
+Start=3.5153 164.785 9.99039
+End=-2.81833 164.972 14.8083
+Rotate=-0.0104953 -0.444139 -0.0052104 0.895881
+Length=7.96
+</SEGMENT>
+<SEGMENT>
+Name=Lower Jaw
+BoneColor=0 255 255 255
+Hidden=TRUE
+Start=0 155.16 10.3606
+End=0.000212026 155.16 19.7968
+Rotate=-2.38553e-012 1.12347e-005 -2.12341e-007 1
+Length=9.43622
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Shoulder
+BoneColor=0 0 255 255
+Start=-7.13089 132.778 1.63495
+End=-25.8575 137.19 1.63495
+Rotate=-0.554372 -0.438944 0.438939 0.554376
+Length=19.2393
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Arm Steady
+BoneColor=128 64 64 255
+Hidden=TRUE
+Start=-15.7028 134.459 2.24986
+End=-31.6834 134.637 2.24986
+Rotate=-0.502777 -0.497208 0.497208 0.502777
+Length=15.9816
+<NULLOBJECT>
+Name=Right Hand Target
+BoneColor=0 0 255 255
+UserMoved=TRUE
+Start=-18.5 80.67 1.63836
+End=-18.5 80.67 13.7584
+Rotate=0 0 0 1
+Length=12.12
+<LimitManipulators>
+Value=TRUE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+</NULLOBJECT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Bicep
+BoneColor=0 0 255 255
+Start=-15.8571 134.535 1.63495
+End=-41.1764 134.778 1.71064
+Rotate=-0.00684359 -0.706016 6.79661e-005 0.708163
+Length=25.3206
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<HasFalloff>
+Value=TRUE
+PivotOuter=35.2304
+PivotInner=0
+EndOuter=35.2304
+EndInner=0
+</HasFalloff>
+<SEGMENT>
+Name=Right Forearm
+BoneColor=128 0 128 255
+Start=-41.1764 134.778 1.71064
+End=-68.5234 134.719 1.62564
+Rotate=0.00111072 -0.708204 0.000416054 0.706007
+Length=27.3472
+Chained=TRUE
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<HasFalloff>
+Value=TRUE
+PivotOuter=35.1963
+PivotInner=0
+EndOuter=35.1963
+EndInner=0
+</HasFalloff>
+<SEGMENT>
+Name=Right Hand
+BoneColor=128 64 0 255
+Start=-68.5234 134.719 1.62564
+End=-91.0304 134.694 1.62563
+Rotate=-0.00119861 -0.707106 0.00198384 0.707104
+Length=22.507
+Chained=TRUE
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Middle Finger
+BoneColor=0 128 0 255
+Hidden=TRUE
+Start=-81.868 134.129 1.64621
+End=-96.7244 134.12 1.59452
+Rotate=0.000214619 -0.708336 0.000213873 0.705876
+Length=14.8565
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Right Pinky Finger
+BoneColor=128 64 0 255
+Hidden=TRUE
+Start=-80.1971 133.501 -3.48936
+End=-91.415 133.493 -3.40883
+Rotate=0.000267285 -0.704564 0.000237554 0.70964
+Length=11.2182
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Right Index Finger
+BoneColor=255 128 128 255
+Hidden=TRUE
+Start=-81.9849 134.129 4.41798
+End=-93.5545 134.121 4.49043
+Rotate=0.000232561 -0.704889 0.000256178 0.709317
+Length=11.5698
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Right Thumb
+BoneColor=255 128 192 255
+Hidden=TRUE
+Start=-72.5371 134.132 5.52477
+End=-82.4318 134.127 9.66371
+Rotate=0.000235459 -0.554122 6.73376e-005 0.832435
+Length=10.7255
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Right Ring Finger
+BoneColor=128 128 0 255
+Hidden=TRUE
+Start=-81.8807 133.706 -0.971911
+End=-95.1285 133.706 -0.693348
+Rotate=0 -0.699635 0 0.714501
+Length=13.2507
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Right Ring F 1
+BoneColor=128 128 0 255
+Hidden=TRUE
+Start=-81.8267 134.129 -0.976451
+End=-87.1089 134.126 -0.733463
+Rotate=0.000197328 -0.690669 0.000202837 0.723171
+Length=5.28779
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Ring F 2
+BoneColor=64 64 128 255
+Hidden=TRUE
+Start=-85.3137 134.436 -0.762633
+End=-85.2348 134.18 -2.39948
+Rotate=0.00483683 0.9967 -0.0773134 0.0242372
+Length=1.65863
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Ring F 3
+BoneColor=255 0 128 255
+Hidden=TRUE
+Start=-88.3908 133.924 -0.903431
+End=-88.3921 133.924 -2.22057
+Rotate=-0.00028227 -1 1.38992e-007 0.00049241
+Length=1.31714
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Middle F 1
+BoneColor=128 128 0 255
+Hidden=TRUE
+Start=-81.7933 134.655 1.68939
+End=-86.9689 134.652 1.75473
+Rotate=0.000205382 -0.702629 0.000205279 0.711556
+Length=5.17602
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Middle F 2
+BoneColor=64 64 128 255
+Hidden=TRUE
+Start=-85.1904 134.415 2.03641
+End=-85.1115 134.159 0.399544
+Rotate=0.00483812 0.996701 -0.0773084 0.0242372
+Length=1.65864
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Middle F 3
+BoneColor=255 0 128 255
+Hidden=TRUE
+Start=-88.1986 134.001 1.94246
+End=-88.2 134.001 0.62532
+Rotate=-0.000282265 -1 1.4959e-007 0.000529961
+Length=1.31714
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Pinky F 1
+BoneColor=255 128 0 255
+Hidden=TRUE
+Start=-80.1722 133.472 -3.43005
+End=-83.905 133.252 -3.25189
+Rotate=0.0204045 -0.689774 0.0212 0.723427
+Length=3.74352
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Pinky F 2
+BoneColor=0 0 255 255
+Hidden=TRUE
+Start=-83.0238 133.743 -3.29039
+End=-82.884 133.743 -4.90674
+Rotate=0.000234683 0.99907 1.01302e-005 0.0431252
+Length=1.62238
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Pinky F 3
+BoneColor=128 0 128 255
+Hidden=TRUE
+Start=-85.8301 133.278 -3.22033
+End=-85.7972 133.278 -4.8695
+Rotate=0.000225701 0.99995 2.25094e-006 0.0099726
+Length=1.6495
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Index F 1
+BoneColor=255 128 255 255
+Hidden=TRUE
+Start=-81.9777 134.398 4.41803
+End=-84.7496 134.323 4.35362
+Rotate=0.00963432 -0.715205 0.0094898 0.698784
+Length=2.77367
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Index F 2
+BoneColor=255 255 128 255
+Hidden=TRUE
+Start=-84.1836 133.777 4.74046
+End=-84.1847 133.777 3.48442
+Rotate=-0.000197568 -1 8.64036e-008 0.000437335
+Length=1.25604
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Index F 3
+BoneColor=0 128 255 255
+Hidden=TRUE
+Start=-87.0124 133.719 4.75859
+End=-87.0133 133.719 3.71189
+Rotate=-0.000236708 -1 1.01799e-007 0.000430063
+Length=1.0467
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Thumb 1
+BoneColor=128 0 64 255
+Hidden=TRUE
+Start=-72.5418 133.622 5.5308
+End=-76.2542 133.62 6.99567
+Rotate=0.000260506 -0.562562 6.23117e-005 0.826755
+Length=3.99096
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Thumb 2
+BoneColor=128 64 64 255
+Hidden=TRUE
+Start=-75.515 133.655 7.55202
+End=-76.0613 133.655 5.96397
+Rotate=-6.36635e-005 -0.986309 1.06443e-005 0.164907
+Length=1.67939
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Thumb 3
+BoneColor=255 128 64 255
+Hidden=TRUE
+Start=-77.6794 133.551 7.94359
+End=-78.3713 133.485 6.25049
+Rotate=0.00229094 -0.98109 0.0179267 0.192708
+Length=1.83021
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Arm Hinge
+BoneColor=128 64 64 255
+Hidden=TRUE
+Start=-15.5512 134.656 1.5509
+End=-68.4132 134.656 1.5509
+Rotate=0 -0.707107 0 0.707107
+Length=52.862
+<SEGMENT>
+Name=Right Elbow
+BoneColor=255 128 64 255
+Hidden=TRUE
+Start=-41.6599 134.656 1.87323
+End=-41.821 134.656 -18.4335
+Rotate=-0.707101 -0.707101 0.00280475 0.00280475
+Length=20.3074
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Bicep Orient
+BoneColor=128 64 128 255
+Hidden=TRUE
+Start=-21.3531 134.656 -5.05685
+End=-36.8249 134.656 -7.79663
+Rotate=-2.28264e-015 -0.76628 -2.72237e-015 0.642507
+Length=15.7125
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Left Shoulder
+BoneColor=128 0 128 255
+Start=7.85151 132.766 1.65168
+End=26.6862 137.18 1.65168
+Rotate=-0.554115 0.439269 -0.439269 0.554115
+Length=19.345
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Arm Steady
+BoneColor=128 64 64 255
+Hidden=TRUE
+Start=17.044 134.635 2.26659
+End=0.885868 134.812 2.26659
+Rotate=-0.502731 -0.497254 0.497254 0.502731
+Length=16.1591
+<NULLOBJECT>
+Name=Left Hand Target
+BoneColor=0 0 255 255
+UserMoved=TRUE
+Start=19.91 80.68 1.66096
+End=19.91 80.68 13.781
+Rotate=0 0 1.49012e-008 1
+Length=12.12
+<LimitManipulators>
+Value=TRUE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+</NULLOBJECT>
+</SEGMENT>
+<SEGMENT>
+Name=Left Arm Hinge
+BoneColor=128 64 64 255
+Hidden=TRUE
+Start=17.2613 134.654 1.56763
+End=69.8452 134.377 1.56763
+Rotate=0.00186247 0.707104 -0.00186247 0.707104
+Length=52.5847
+<SEGMENT>
+Name=Left Elbow
+BoneColor=255 128 64 255
+Hidden=TRUE
+Start=43.3699 134.654 1.88996
+End=43.531 134.654 -18.4168
+Rotate=-0.707101 0.707101 -0.00280475 0.00280475
+Length=20.3074
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Bicep Orient
+BoneColor=128 64 128 255
+Hidden=TRUE
+Start=23.0632 134.654 -5.04012
+End=38.5349 134.654 -7.77991
+Rotate=0 0.76628 0 0.642506
+Length=15.7124
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Left Bicep
+BoneColor=255 0 255 255
+Start=17.2841 134.637 1.65168
+End=42.4234 134.782 1.79493
+Rotate=-0.00580334 0.705065 -0.00174641 0.709116
+Length=25.1402
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<HasFalloff>
+Value=TRUE
+PivotOuter=35.2341
+PivotInner=0
+EndOuter=35.2341
+EndInner=0
+</HasFalloff>
+<SEGMENT>
+Name=Left Forearm
+BoneColor=128 0 0 255
+Start=42.4235 134.782 1.79493
+End=69.8924 134.764 1.65166
+Rotate=-0.00450454 0.708934 -0.00494299 0.705243
+Length=27.4693
+Chained=TRUE
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<HasFalloff>
+Value=TRUE
+PivotOuter=35.1961
+PivotInner=0
+EndOuter=35.1961
+EndInner=0
+</HasFalloff>
+<SEGMENT>
+Name=Left Hand
+BoneColor=255 128 0 255
+Start=69.8924 134.764 1.65166
+End=89.1373 134.837 1.59786
+Rotate=-0.00258894 0.70809 9.66558e-005 0.706118
+Length=19.2451
+Chained=TRUE
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Middle Finger
+BoneColor=0 128 0 255
+Hidden=TRUE
+Start=82.2655 133.843 1.92489
+End=97.0351 133.835 1.68748
+Rotate=0.000193935 0.712766 -0.000188864 0.701401
+Length=14.7715
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Left Pinky Finger
+BoneColor=128 64 0 255
+Hidden=TRUE
+Start=80.6196 133.215 -3.12126
+End=93.0306 133.207 -3.15938
+Rotate=0.000241559 0.708192 -0.000214025 0.70602
+Length=12.4111
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Left Index Finger
+BoneColor=255 128 128 255
+Hidden=TRUE
+Start=82.4041 133.843 4.65351
+End=95.0027 133.835 4.50047
+Rotate=0.000215885 0.711388 -0.000232748 0.702799
+Length=12.5995
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Left Thumb
+BoneColor=255 128 192 255
+Hidden=TRUE
+Start=72.9562 133.846 5.76031
+End=82.0823 133.841 9.38842
+Rotate=0.000251695 0.561503 -8.14975e-005 0.827475
+Length=9.82084
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Left Ring Finger
+BoneColor=128 128 0 255
+Hidden=TRUE
+Start=82.2404 133.42 -0.679622
+End=95.4386 133.42 -0.469321
+Rotate=0 0.701451 0 0.712717
+Length=13.1999
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+<SEGMENT>
+Name=Left Ring F 1
+BoneColor=128 128 0 255
+Hidden=TRUE
+Start=82.2458 133.843 -0.740911
+End=87.4214 133.84 -0.675567
+Rotate=0.000207061 0.702629 -0.000203579 0.711556
+Length=5.17602
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Ring F 2
+BoneColor=64 64 128 255
+Hidden=TRUE
+Start=84.914 134.368 -0.677603
+End=84.9173 134.362 -2.31446
+Rotate=-0.00453107 0.999988 -0.0018363 0.000998483
+Length=1.63687
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Ring F 3
+BoneColor=255 0 128 255
+Hidden=TRUE
+Start=87.9729 134.038 -0.697239
+End=87.9743 134.037 -2.01437
+Rotate=-0.000188319 1 -0.000376608 0.00052989
+Length=1.31713
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Left Middle F 1
+BoneColor=128 128 0 255
+Hidden=TRUE
+Start=82.2125 134.369 1.92493
+End=87.3881 134.366 1.99027
+Rotate=0.000205362 0.702629 -0.0002053 0.711556
+Length=5.17601
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Middle F 2
+BoneColor=64 64 128 255
+Hidden=TRUE
+Start=85.1737 134.366 1.92913
+End=85.1726 134.362 0.286675
+Rotate=0.00683609 -0.999976 0.00121471 0.000342769
+Length=1.64246
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Middle F 3
+BoneColor=255 0 128 255
+Hidden=TRUE
+Start=88.3063 134.154 2.06337
+End=88.3063 134.165 0.726125
+Rotate=-0.0362596 -0.999334 -0.004105 0.00014902
+Length=1.33729
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Left Pinky F 1
+BoneColor=255 128 0 255
+Hidden=TRUE
+Start=80.6182 133.506 -3.18987
+End=84.4104 133.286 -3.09498
+Rotate=0.0203121 0.697926 -0.0206531 0.715584
+Length=3.79976
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Pinky F 2
+BoneColor=0 0 255 255
+Hidden=TRUE
+Start=83.2326 133.551 -3.44071
+End=83.0928 133.551 -5.05707
+Rotate=0.000228169 -0.99907 -9.84893e-006 0.043125
+Length=1.62239
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Pinky F 3
+BoneColor=128 0 128 255
+Hidden=TRUE
+Start=85.8086 133.472 -3.28173
+End=85.7758 133.472 -4.9309
+Rotate=0.000231135 -0.999951 -2.29819e-006 0.00994256
+Length=1.64949
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Left Index F 1
+BoneColor=255 128 255 255
+Hidden=TRUE
+Start=81.5965 134.112 4.65357
+End=84.3686 134.037 4.80233
+Rotate=0.00926235 0.687845 -0.00985796 0.725731
+Length=2.7771
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Index F 2
+BoneColor=255 255 128 255
+Hidden=TRUE
+Start=84.2178 133.983 4.70874
+End=84.2188 133.983 3.45271
+Rotate=-0.000197574 1 -7.91991e-008 0.000400857
+Length=1.25603
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Index F 3
+BoneColor=0 128 255 255
+Hidden=TRUE
+Start=87.0314 133.753 4.6146
+End=87.0323 133.753 3.5679
+Rotate=-0.000245821 1 -1.05719e-007 0.000430063
+Length=1.0467
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Left Thumb 1
+BoneColor=128 0 64 255
+Hidden=TRUE
+Start=72.9844 133.336 5.78988
+End=76.6733 133.334 7.23121
+Rotate=0.000255036 0.563947 -7.40208e-005 0.825811
+Length=3.96049
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Thumb 2
+BoneColor=128 64 64 255
+Hidden=TRUE
+Start=75.7265 133.306 7.3113
+End=76.2728 133.305 5.72325
+Rotate=5.4721e-005 0.986309 -0.000294848 0.164905
+Length=1.67939
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Thumb 3
+BoneColor=255 128 64 255
+Hidden=TRUE
+Start=77.7808 133.277 8.05066
+End=78.2483 133.276 6.30455
+Rotate=-5.48421e-005 0.991458 -0.000283924 0.130428
+Length=1.80761
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowYRotate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Pelvis
+BoneColor=255 0 0 255
+Start=-1.3672e-008 106.973 0.312778
+End=0.00057192 79.2591 -2.08616e-006
+Rotate=0.00443447 -0.711072 0.703092 0.0043702
+Length=27.7156
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Thigh
+BoneColor=0 255 0 255
+Start=8.53146 97.1274 -0.375778
+End=6.82417 53.1317 5.03445
+Rotate=0.478321 0.458506 -0.538872 0.52019
+Length=44.36
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Calf
+BoneColor=128 0 128 255
+Start=6.82417 53.1317 5.03446
+End=5.74003 13.05 3.43323e-005
+Rotate=-0.545297 -0.514724 0.46698 -0.468657
+Length=40.4112
+Chained=TRUE
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Foot
+BoneColor=255 0 0 255
+Start=5.74003 13.05 3.14713e-005
+End=6.02513 0.253615 0.0774663
+Rotate=0.487512 0.509222 -0.50126 0.50176
+Length=12.7998
+Chained=TRUE
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Toes
+BoneColor=255 255 0 255
+Start=6.4008 3.60795 9.28636
+End=6.30536 3.61117 25.6829
+Rotate=-2.90003e-005 -0.00291186 -0.023765 0.999713
+Length=16.3968
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Left Leg Hinge
+BoneColor=0 255 255 255
+Hidden=TRUE
+Start=8.49241 97.0594 0.0261288
+End=5.86333 12.944 0.02613
+Rotate=-0.0110465 -0.707021 0.707021 0.0110465
+Length=84.1564
+<SEGMENT>
+Name=Left Knee
+BoneColor=0 128 255 255
+Hidden=TRUE
+Start=7.40344 46.3422 0.0261283
+End=7.39141 46.0813 30.0641
+Rotate=0.00434621 -0.00010014 -0.0230381 0.999725
+Length=30.0391
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Left Thigh Orient
+BoneColor=0 255 0 255
+Hidden=TRUE
+Start=8.89541 78.6966 8.90694
+End=8.14408 49.8802 11.5189
+Rotate=0.482658 0.471085 -0.529296 0.514748
+Length=28.9443
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Thigh
+BoneColor=255 0 128 255
+Start=-7.95952 97.21 -0.394607
+End=-6.72056 52.8114 5.12053
+Rotate=0.471723 -0.464613 0.540561 0.519043
+Length=44.757
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Calf
+BoneColor=255 128 128 255
+Start=-6.72056 52.8114 5.12053
+End=-5.78997 13.06 -6.29425e-005
+Rotate=-0.538 0.52385 -0.471662 -0.462247
+Length=40.0906
+Chained=TRUE
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Foot
+BoneColor=255 128 255 255
+Start=-5.78997 13.0601 -6.1512e-005
+End=-6.03359 0.280019 1.58199e-005
+Rotate=0.497747 -0.50224 0.492665 0.507232
+Length=12.7824
+Chained=TRUE
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Toes
+BoneColor=0 255 255 255
+Start=-6.43793 3.60734 9.34389
+End=-6.33758 3.62407 25.7356
+Rotate=-0.000444811 0.00307115 0.0213589 0.999767
+Length=16.392
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+</LimitManipulators>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+<SEGMENT>
+Name=Right Leg Hinge
+BoneColor=0 255 255 255
+Hidden=TRUE
+Start=-7.97437 97.421 0.0261288
+End=-6.0067 12.8163 0.0261283
+Rotate=-0.00822097 0.707059 -0.707059 0.00822103
+Length=84.6276
+<SEGMENT>
+Name=Right Knee
+BoneColor=0 128 255 255
+Hidden=TRUE
+Start=-6.94581 46.3397 0.0261283
+End=-6.93393 46.0788 30.0641
+Rotate=0.00434607 9.88811e-005 0.0227531 0.999732
+Length=30.0391
+<LimitManipulators>
+Value=TRUE
+AllowXTranslate=FALSE
+AllowYTranslate=FALSE
+AllowZTranslate=FALSE
+AllowXRotate=FALSE
+AllowZRotate=FALSE
+</LimitManipulators>
+<SEGMENT>
+Name=Right Thigh Orient
+BoneColor=0 255 0 255
+Hidden=TRUE
+Start=-8.41934 78.695 8.90694
+End=-7.68452 50.0239 11.5189
+Rotate=0.482435 -0.471072 0.52929 0.514975
+Length=28.7992
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</SEGMENT>
+</NULLOBJECT>
+<NULLOBJECT>
+Name=Left Foot Target
+BoneColor=0 0 255 255
+UserMoved=TRUE
+Start=5.74 13.05 0
+End=5.74 13.05 15.7648
+Rotate=0 0 -4.47362e-008 1
+Length=15.7648
+</NULLOBJECT>
+<NULLOBJECT>
+Name=Right Foot Target
+BoneColor=0 0 255 255
+UserMoved=TRUE
+Start=-5.79 13.06 0
+End=-5.79 13.06 15.76
+Rotate=0 0 -2.98023e-008 1
+Length=15.76
+</NULLOBJECT>
+</SEGMENT>
+</BONES>
+<RELATIONCONTAINER>
+<EMPTYRELATION>
+MatchName=User Properties
+<EMPTYRELATION>
+MatchName=Hands
+<EMPTYRELATION>
+MatchName=Left Hand Clench
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Left Index Finger
+<EMPTYRELATION>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 8586.24
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 -1172.97
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 7947.15
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.84971e-041
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYRELATION>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Middle Finger
+<EMPTYRELATION>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 8897.23
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 3101.17
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 16597.6
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.84971e-041
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYRELATION>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Pinky Finger
+<EMPTYRELATION>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 8869.26
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 -8031.47
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 456.31
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.84971e-041
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYRELATION>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Thumb
+<EMPTYRELATION>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 7110.23
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 980.246
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 9048.79
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.84971e-041
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYRELATION>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Ring Finger
+<EMPTYDRIVER>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 8908
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 2643.83
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 12047.4
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.68156e-042
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYDRIVER>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Right Hand Clench
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Right Index Finger
+<EMPTYRELATION>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 8750.58
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 0.011771
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 -9122.44
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.84971e-041
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYRELATION>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Middle Finger
+<EMPTYRELATION>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 8891.71
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 -1340.04
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 -10049.6
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.84971e-041
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYRELATION>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Pinky Finger
+<EMPTYRELATION>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 8938.9
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 2314.09
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 -6821.11
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.84971e-041
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYRELATION>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Thumb
+<EMPTYRELATION>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 7369.99
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 -8742.14
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 -14971.5
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.84971e-041
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYRELATION>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Ring Finger
+<EMPTYDRIVER>
+MatchName=Transform
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 8343.95
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 -1073.01
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 -9952.08
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 1.23314e-041
+1 1:40:0 1.68156e-042
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</EMPTYDRIVER>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Show Fingers
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Right Index Finger
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Pinky Finger
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Middle Finger
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Thumb
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Pinky Finger
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Middle Finger
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Index Finger
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Thumb
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Ring Finger
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Ring Finger
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Rig
+<EMPTYRELATION>
+MatchName=Left Hand Lock
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Left Arm Steady
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Arms
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Translate.X
+<SPLINE>
+1 0 0
+1 1:40:0 36.926
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Translate.Y
+<SPLINE>
+1 0 0
+1 1:40:0 4.17233e-006
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Translate.Z
+<SPLINE>
+1 0 0
+1 1:40:0 -42.8054
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Arms
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Hand
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Arms
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 70.5843
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 70.8332
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 0.504488
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 100
+1 1:40:0 0.506261
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Right Hand Lock
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Right Arm Steady
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Arms
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Translate.X
+<SPLINE>
+1 0 0
+1 1:40:0 36.5232
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Translate.Y
+<SPLINE>
+1 0 0
+1 1:40:0 1.2517e-006
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Translate.Z
+<SPLINE>
+1 0 0
+1 1:40:0 -24.1281
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Arms
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Hand
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Arms
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 0.523555
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 -0.525917
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 -70.5494
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 100
+1 1:40:0 70.8677
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Balance Rigid
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Hips
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Balance Point Rigid
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Balance
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Hips
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Balance Point
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Steady
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Back2
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Head And Spine
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Head
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Head And Spine
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Arm Steady
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Arms
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Arm Steady
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Steady Arms
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Setup
+<EMPTYRELATION>
+MatchName=Basic Setup
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Balance Base
+<AIMATCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Balance Base Aim
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</AIMATCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Balance Base Rigid
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Foot Target
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+<AIMATCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Balance Base Aim
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</AIMATCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Balance Feet Center
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Foot Target
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Foot Target
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Balance Left Foot
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Foot Target
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+<TRANSLATELIMITS>
+Min=-1000 0 -1000
+Max=1000 0 1000
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATELIMITS>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Balance Point
+<KINEMATICCONSTRAINT>
+Name=Transform
+BeforeAction=TRUE
+BoneTarget=..|Balance Left Foot
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</KINEMATICCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Balance Point Rigid
+<KINEMATICCONSTRAINT>
+Name=Transform
+BeforeAction=TRUE
+BoneTarget=..|Left Foot Target
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</KINEMATICCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Balance Right Foot
+<TRANSLATETOCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Foot Target
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATETOCONSTRAINT>
+<TRANSLATELIMITS>
+Min=-999.998 0 -999.998
+Max=999.998 0 999.998
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</TRANSLATELIMITS>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Index F 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Index Finger
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Index F 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Index Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Index F 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Index Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Middle F 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Middle Finger
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Middle F 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Middle Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Middle F 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Middle Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Pinky F 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Pinky Finger
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Pinky F 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Pinky Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Pinky F 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Pinky Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Ring F 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Ring Finger
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Ring F 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Ring Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Ring F 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Ring Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Thumb 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Thumb
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Thumb 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Thumb
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Thumb 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Thumb
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Index F 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Index Finger
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Index F 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Index Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Index F 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Index Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Middle F 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Middle Finger
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Middle F 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Middle Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Middle F 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Middle Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Pinky F 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Pinky Finger
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Pinky F 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Pinky Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Pinky F 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Pinky Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Ring F 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Ring Finger
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Ring F 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Ring Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Ring F 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Ring Finger
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Thumb 1
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Thumb
+StoreRoll=FALSE
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Thumb 2
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Thumb
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Thumb 3
+<ROLLLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Thumb
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ROLLLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=IK Legs Setup
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Left Calf
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<KINEMATICCONSTRAINT>
+Name=Transform
+BeforeAction=TRUE
+BoneTarget=..|Left Foot Target
+<SupportLimitsDamping>
+Value=TRUE
+ComputeRoll=TRUE
+</SupportLimitsDamping>
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</KINEMATICCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Foot
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Foot Target
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 49.1794
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 50.506
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 -50.8153
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 100
+1 1:40:0 49.4806
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Leg Hinge
+<AIMATCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Foot Target
+<ScaleToReach>
+Value=TRUE
+ScaleZOnly=TRUE
+</ScaleToReach>
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</AIMATCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Thigh
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Thigh Orient
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Calf
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<KINEMATICCONSTRAINT>
+Name=Transform
+BeforeAction=TRUE
+BoneTarget=..|Right Foot Target
+<SupportLimitsDamping>
+Value=TRUE
+ComputeRoll=TRUE
+</SupportLimitsDamping>
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</KINEMATICCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Foot
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Foot Target
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+<QUATERNIONROTATEDRIVER>
+MatchName=Rotate
+<CHANNELDRIVER>
+MatchName=X
+<SPLINE>
+1 0 0
+1 1:40:0 49.8781
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Y
+<SPLINE>
+1 0 0
+1 1:40:0 -49.7907
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=Z
+<SPLINE>
+1 0 0
+1 1:40:0 49.9893
+</SPLINE>
+</CHANNELDRIVER>
+<CHANNELDRIVER>
+MatchName=W
+<SPLINE>
+1 0 100
+1 1:40:0 50.3401
+</SPLINE>
+</CHANNELDRIVER>
+</QUATERNIONROTATEDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Leg Hinge
+<AIMATCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Foot Target
+<ScaleToReach>
+Value=TRUE
+ScaleZOnly=TRUE
+</ScaleToReach>
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</AIMATCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Thigh
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Thigh Orient
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Foot Target
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Knee
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Foot Target
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Knee
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+<EMPTYRELATION>
+MatchName=Ik Arms Setup
+<RELATION>
+Name=Relationship1
+KeyDim=1
+<OBJECTSHORTCUT>
+MatchName=Bones
+<OBJECTSHORTCUT>
+MatchName=Left Arm Hinge
+<AIMATCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Hand Target
+<ScaleToReach>
+Value=TRUE
+ScaleZOnly=TRUE
+</ScaleToReach>
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</AIMATCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Bicep
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Left Bicep Orient
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Forearm
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<KINEMATICCONSTRAINT>
+Name=Transform
+BeforeAction=TRUE
+BoneTarget=..|Left Hand Target
+<SupportLimitsDamping>
+Value=TRUE
+ComputeRoll=TRUE
+</SupportLimitsDamping>
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</KINEMATICCONSTRAINT>
+<EULERLIMITS>
+Min=0 -179 0
+Max=0 0 0
+</EULERLIMITS>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Arm Hinge
+<AIMATCONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Hand Target
+<ScaleToReach>
+Value=TRUE
+ScaleZOnly=TRUE
+</ScaleToReach>
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</AIMATCONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Bicep
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<ORIENTLIKECONSTRAINT>
+BeforeAction=TRUE
+BoneTarget=..|Right Bicep Orient
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</ORIENTLIKECONSTRAINT>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Forearm
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+<KINEMATICCONSTRAINT>
+Name=Transform
+BeforeAction=TRUE
+BoneTarget=..|Right Hand Target
+<SupportLimitsDamping>
+Value=TRUE
+ComputeRoll=TRUE
+</SupportLimitsDamping>
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 100
+</SPLINE>
+</CHANNELDRIVER>
+</KINEMATICCONSTRAINT>
+<EULERLIMITS>
+Min=0 0 0
+Max=0 179 0
+<CHANNELDRIVER>
+MatchName=Enforcement
+Interpolation=1
+<SPLINE>
+1 0 0
+1 1:40:0 0
+</SPLINE>
+</CHANNELDRIVER>
+</EULERLIMITS>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Hand Target
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Right Elbow
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Hand Target
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+<OBJECTSHORTCUT>
+MatchName=Left Elbow
+<TIMEBASEDDRIVER>
+MatchName=Hidden
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=TRUE
+</BOOL>
+</TIMEBASEDKEY>
+<TIMEBASEDKEY>
+MatchName=Hidden
+<BOOL> Hidden
+Value=FALSE
+</BOOL>
+Time=1:40:0
+</TIMEBASEDKEY>
+</TIMEBASEDDRIVER>
+</OBJECTSHORTCUT>
+</OBJECTSHORTCUT>
+</RELATION>
+</EMPTYRELATION>
+</EMPTYRELATION>
+</EMPTYRELATION>
+</EMPTYRELATION>
+</RELATIONCONTAINER>
+<FileInfo>
+CreatedBy=Joe Cosman
+<Preview>
+Width=97
+Height=97
+<DATA>
+Version=2
+d606ff07010607cf06
+d43b043a3b3a3b3ad23b
+d24a03494a4a49d34a
+d201ff00d101
+d637fd360334353636d337
+d246014445d146
+d601fe00040929250400d301
+d336033b525038d236
+d646064546464b605d48d246
+d601ff000401372d352cd201
+d43605355e575c5635d336
+d646074546466b64696345d346
+d601ff0005023f3c3e3a02d301
+d43605356564616135d336
+d6460745464672706d6e45d346
+d501ff00041d826e1300d301
+d4360535499c894135d336
+d6460745474557a4925145d346
+d50105000100694a00d201
+d3360332846c32d236
+d64606454646438f7841d246
+d3010300614200d201
+d436043733836733d236
+d3460343887243d246
+d60106000100055e4902d201
+d3360437a5813337d336
+d34604497d714547d346
+d601fe0004074f440300d301
+d53606353637a98b3337d336
+d546ff45024b6d66d146
+d601fe0003064f4303d201
+d6360635363637a78a32d236
+d646ff4504464b6d6645d246
+d601fe000315494003d201
+d436043541b88832d236
+d446044551616444d246
+d601070001001f40400800d301
+d436043448c29837d236
+d6460645464457515e49d246
+d501ff00041e3b440c00d301
+d436043448bfad3cd236
+d4460544574b5a5045d346
+d4010500253a430d00d301
+d436053450c4ac3b35d336
+d44604445c485950d246
+d4010500322a3f0c00d301
+d436043268cda93bd236
+d44605446531574e45d346
+d40105003548661a00d301
+d5360635326bd3bd4435d336
+d4460544674c775745d346
+d60107000100304e5d1300d301
+d43605335fd0b23f35d336
+d44605446356725245d346
+d60107000100134b440400d301
+d436043540b98e32d236
+d4460345516166d146
+d501ff00041b7b6a1d00d301
+d436053546a98f4735d336
+d446054557988b5745d346
+d601ff0004023f2d2e3cd201
+d436043564575463d236
+d44605457164606f45d346
+d601ff00040134705f2ed201
+d5360637355c8d7b5735d336
+d44604446a968664d246
+d401040007766205d201
+d3360437907e3735d336
+d5460647464798884645d346
+d501ff0003178f5100d201
+d436043543a37132d236
+d6460647464652aa7c42d246
+fd01fd00fc01fe00f5010000fd01040001010000fa01050046f58a0900f801ff00fc01ff00f601ff00fa01ff00010100fd01
+fa360035ed360037fc360037f8360537326bf7a037f036ff37f636ff37f236
+fc46fe45e546ff45fb4605474277f8a847da460045fa46
+fa010000fa01ff00f001fc00fc010500014475612ff901fd00fb010000f70102000100fc01fd00010100fd01
+df36ff34ff35fa3605346a907e5735f936fe35de36
+e14605454745444545fc46074746447599876345f94602444545e846ff45fe460045fd46
+fd01fe00fa01fd00f801fe00fd010f1f3f2b030001000101000102414b4b38fc01fe000403263e2402fe01fd00f801fe00fd01fb00fc01
+fd36ff34f93602353334f73602343334fe3604354c645437fa360535656e685f35fd360634353536516350fd3602353334f73602353334fb360335333437fc36
+fd46ff430045fa4602444344f7460b444345464746465a71634745fa46047179756c45fd46fe4503465f6f5efd4602454343f74602454343fb4602454343fb46
+ff010400072f2e09fc01ff00041638240200fb0104000220381afe00070843204734060508fc00031e877215fd0008021e18061a4e1b3917fe00030b312d06f9010e001437290400010100000e342c0700fd01
+ff3605353957573b35fc360335465d4ef8362b354a5d483234343a674c6a5b37373935343433354b9e8b4333333535374b463848724960463334333c595639f9360435425d5237fd3604353e5c5539fc36
+ff4604454964644afb460345546b5df8462b45586a564344434871577466454647454344444558a694524343454447585447557c556b524243424b666348f9460445516a5f47fd4604454e686249fc46
+0601000232303637fc0106000f3e243b1d00fc01ff002b123e3266442e2a4572579b997d8b88381e292e08006345001b31101b3ebdba929db87b847c48353963433131f90104054029322dfe010500043d2c2f2ffc01
+ff3605355b555a5f35fc36053f644c634934fb362d354265548268585263856ea8a48e9e9b5d4a535a3c317f67314a5c41455db9b6877aa1747d6d5956608263565935fa3605386450585534fe3605376251585835fd36
+ff4605456763686c45fc46054f705b6f5844fb462d455172628b756b6b88a999cacdbab8ba765f61664b418a734158694f556fcbc9a9b2ca9ca29c776a6c8b70646645fb460f4547715e656245474546466f5f656545fd46
+ff0105054212114002fd010700163c0230240000fd01ff002c183a27847266685f6882766981b0ac6564bad527005f44007feb8a8e8a9aa4aec1c0c9ad9a9986688c48203b02fa010e0947091e3b010000010643131b3902fd01
+ff360437683f3d66fc3606354562315b4e34fb362c3546614e9c8d7f7d72798c7f708bb9b2706fc1de50307f692f96f0917867809d7f71708d7c687a8083a26a4861f936053c6a36496135fe360537683e486035fd36
+06454647744e4c72fc460645546f41675c44fd462e454645546e5da396a2b0b3bed6d4d3d9dde5cdcde4e15e418d773e9ff0a5a29caab6bfd1d0d7c1b3b3a58ea976576dfa460f454a7646586e4445464648744d576d45fd46
+070001002045401a00fd01070003294235080000fd01ff002c0632452c030306060e25232a271d26243a708318045142034e915a422810071324252611070705001a403e1100fa010602244443130000fe01041d433f1100fd01
+ff3605354b67634735fb360353655d3af9362c385968563437393a3f4f4c514f484f4c5e889a46378673316fa5745f4c3f39404c4b4e403c3a37314665644035fa36043550666743fd3605354967634035fd36
+074546455a73715645fd460545466071694afb4621474647657463454648484d5b5b6260575b617b9ea25444a98f407aac84735e4e474ffe5c094f484847425571704f45f9460d5d727253454646474658736f4f45fd46
+fd01020c0e00fb0105000211070000f90102030c03fd01f80008010200064e43030102fd000001fc00010100fe01020a0800f701020e0900fc0104000b070000fd01
+fe3603353d3f35fc3605353636413835f736003dfb36f7340635398774333533fe3402353635fe340035fd3602353b39f73603353e3b35fc3603353c3935fc36
+fd46024d4f45f9460350494545f94601454cfe4602454646fa44ff4306444547ae944245fd4402454645fe440045fd4603454b4945f84603454e4a45fc4603454c4945fc46
+fc01fe00fc010300010000f601ff00f401fe0003064e4303e3010000f7010000fc01
+fc360035f836ff35e636ff350339887433f0360035f5360035f9360035fa36
+fc460045f846ff45f6460045f24605454647af9442f0460045f5460045f9460045fa46
+f2010000f6010000f101ff00040664510200e4010000f101
+d436043538978033e3360035f136
+d54605454647aa8c43e3460045f146
+d501ff000232b659e2010000f101
+d43604335bd98a31e3360035f136
+d446044369cc7c43e3460045f146
+d501ff000449c96e0f00d301
+d5360637326ce39b3d35d336
+d446054279cf8a4e45d346
+d50105000643343237d201
+d436053766696a5e35d336
+d4460547745d596c45d346
+d5010600033b62532f00d301
+d5360637365f8b7c5635d336
+d5460647466d86766544d346
+d5010500010b684f07d201
+d43604353a8e7b38d236
+d346034b897548d246
+db0105000100000101fe00024b2c00fc0102000100da01
+d6360737363630765f3237fd360037d836
+d54605454742735b43d246
+da01fa000318885c09fa00d901
+da36fb35053443a7883a36fe37fe360035da36
+da46ff4509444544454453a0804b45fd460047d846
+da010010fe1aff19041884e4803ffb130009d901
+da360042fd4a06494699f0955230fd31013034d936
+da460b50585958575855a2ee945f3efd3f023e4247da46
+db01040223383738fe370b92d5864e2a292a29292a1400da01
+db3601354ffc5f055ca4d8824c2afd2b012a31d936
+da46005dfd6c066b69ace9925737fd3803373f4745db46
+da01fa000319aa8809fa00d901
+da36fb34053247a6983c36fc37d836
+da460045fd44ff430456aba04b46fc47d846
+d801fc000314b29705fd00d601
+d636ff330735417f843a353234d536
+d7460a4542444450838a4a454244d546
+d8010b00093f36021fbda307154724d501
+d8360c353b665e3547717c3d446c5035d636
+d8460c454b716b465674814c54775e45d646
+da01fe000c1dd7b5071fbba20548f17a0000d701
+d8360c3447dec3384763793a6df49232d636
+d8460d4457e1c84855687e4b79f69a4147d746
+dc01ff00ff010d000e90a10517b1a20524af5b0000d701
+d8360c353da1ab36436e813b4ec37e32d636
+d84611454caab5475273874b5dc084424745464647db46
+db010f000101000166ad16019a8201105a4603fe00d901
+db3601383bfe350e5c6d43388587343cb38c343636383ada36
+db46134443454644799a52498c8f444d70694746464544da46
+dd01fb000f0c93c03f009a7a002938451100010100da01
+db3614415134353f553957378786305bcaae3d3535425034db36
+dd46154547403847454c85866b468d8e4260435c5045473f39da46
+de01fc000e010025bbce7a049777014e47581f00d701
+dc361535425334344e66446f3b79753188d8c94e3435445234db36
+dd461545463f3747445b9b9089497e7e43754a655b45473f37da46
+de01010001fe000f01002fc9da8d04786502585667200001fc00fe010000e101
+de3617353635425234345476577237736c3195e2d1513435435134fc360037e136
+dc4615473f37474463a89e92457c7644785a715c45463f3747db46
+e101fb0014050801001babbd83025e4400420a2f1e0000030802fe00fe010000e201
+e136fe35ff3615344458343547440f5a337e68308fcbc1513434425633fb360037e236
+e146fe45fe4618413d4745558571824288744365153f5b45453f3c4745454645df46
+e001fd00151d8b6d25001aabbe8306725402430f451c0011768a39fc00e001
+e036fe351b334aaea64f354846115a368e74308fccbe4a323f9bbb603635363637e036
+e046194544454459a4885f465586738145967f44651956594250939c6edb46
+e0011e243a39377ee583613537a8cb892d7d6d22421a5a473867d2b271332b2c2707e001
+e0361e5263635f98f1945830344e1863559787488ed5bf676083e1be662f2a2a2c34e036
+e0461e5f6f6e6ca0eb89633d3f7e738760a0915964216d776c8fdbaf703b36373943e046
+e0011f0f1818173f736a4419168fc8834234393e441954241738768049171212100300e101
+e0361a40464644648f7e5a353757297e675c5d5e8ed1b049435d92936034fe32df36
+e0461a4f5554537199896544448180937169696e64216b5c526a9c9b6b42fe410045e046
+e001fd001501355f0d000589c250283b3f24421b46020002335b0bfc00e001
+df36fe3519345e7d3c353c5b295a546265498ed18d3235355b7a3c36363737df36
+df461a454445456a864c464a868071616e715a64276a46454569854b4647fe460047e146
+dc011600173a0001016bc44e0213100349294001010018380001fd00e001
+e0360035fe361635475e3336365e35583644423387d287323634485e3337dc36
+dc461545566b4346447c8671455352456f3364464745576b43fb460047e246
+de0104000100193bfe00025ec44efd00022f4642fe00021a3900db01
+dc36083448613336345a3759fe35093369cf7a333635496034db36
+dc461545576d44474375887143454645634e6c444745596c44db46
+de01fe0001193dfe000950c24e000101002d4e2cfe00021a3b00db01
+dc3615344962343734573f583536363368cc613336354a6033db36
+dc461544576e444743708b71454747455f5560444646586c44db46
+dd01ff00010f26fe000f2cbc50000001002c4e27000100102400db01
+dc36153541503436354f57593537363368c95c343635425034db36
+dd46ff4514505e4447456092714547474560595c444645515d45db46
+dd010300010102fe000c2bc049000101002c581a000100d801
+d7360b354e6d62343636336abe4634d636
+da4612454646445fa17443464745606c544547464645da46
+d7010b0022aa2c000101002d581900d601
+d7360b3547744d343636336abe4534d636
+d7460b45589d5d44464645606d5244d646
+d7010b00119a2d00010100305c0d00d601
+d7360a353e814d343636336bae3dd536
+d7460b454c9e5e4447464563754d45d646
+d7010b0011982d00010100335e0200d601
+d7360a353d814e343636336d9e35d536
+d74604454d9e5e44fe4602667f47d546
+d60102047c2ffd0003316f0200d601
+d63609358a5333363633619c35d536
+d64608459862434646446490d446
+d9010e00010125955a0b00001655701a0100d701
+d7360b354ea9793c353544748d4735d636
+d7460a455cae844c454552809656d546
+da01fe000c0f4251462d00013b3230430c00d701
+d7360c3f66716a553434615556653c35d736
+d8460d454f727c766344446e6363724c45d746
+d8010d000c4519312300002c3c2f370700d701
+d7360b3b68445a4f34345560535e38d636
+d8460c454c7552675d4544636c616b48d646
+d9010d0001011e3e29040100062b2c0a00d601
+d63602496453fe36043955553b35d636
+d7460a45576f624646454962634bd546
+d60102000100fe01fe00d401
+d636fe35fd36ff34d436
+d646fe45fd46ff440045d546
+a001
+a036
+a046
+a001
+a036
+a046
+a001
+a036
+a046
+a001
+a036
+a046
+a001
+a036
+a046
+a001
+a036
+a046
+a001
+a036
+d4460047ce46
+f9010000dd010000fe010000d201
+fb36fe35df360235383ace36
+fa460047fe460045e146014544ce46
+f7010000e1010300010000fd01fd00d701
+fd3605353845404135e03608354151353636354f3ad436
+fc4605453f41404745e04608413746454547394347d546
+fc01ff00da01ff00fd010000d501
+fd360535364e5a3d35e0360935435335363736583c35d536
+fd46074745393443464645e146014037fd46013543d446
+f801ff00e001fe000001fe00d301
+fc360335415234df360935425335363635573c35d536
+fc460647413747464645e24602473f37fd46013543d446
+fa010300010000e101fd000001fd00d401
+fb36013840de360835425335363635583cd436
+fb46014541dd46073f37454645463643d446
+f801ff00e101fd00ff01fe00010100d601
+fb360338553935e0360335425235fe3601583cd436
+fb4605453645464647e146013f37fd460335434645d646
+fd010300010100dd010905080301010308060100d601
+fb3602385839df3602354456fd36025b3e35d536
+fd46fe45043445464647e2460747423a4746464739fe45d646
+fd01010001fd00fd010000eb01fb00091e92813000026c8c4f0cfc00da01
+fb3602385839e536ff350d343535334ab3b458353789c2793dfe360037d936
+fb4602453545e446ff44ff450b435aa797684647919b7c4e46fe47d946
+fd01ff000001fe00fe0102080309f601010001fc00ff0118001535363536347ee7ad6b2d3bc8c97f4628282929270a0000fe01ff00e201
+fb3602385838fe360337343634f43602353334fd36013546fd600b5c96f2b8642e38b1c9774129fe2b022c3437dc36
+fb460a4535444647464644464445f446074344464546464555fe6c146d6a9fe9b16e3b44b3ba7b4c363837373843464647de46
+fa01fb00031b2b2502f6010500173c281006fe00010918fd1909408a864e151b6d906427fd130312050001fc00e201
+fb360338593936fe37022f2c2cf53619354560533f383534343c4849494846659e976231377a9a743f30fd310035fd3602353434e236
+fd46044546453545fe4604473e383a45f6462045546d6050474443444b565657575571a59e6c404583a27d4c3f40403f40444746fe45ff44e246
+fb01010011fd2b042a223e2200f6010a000b43737e735242281508fc0007314b080000115922f700040c11252409e301
+fc360335384f2efd2b022e262ef436163c668c88785f574e443a3633333434577039363640794efd360a3534333435373b3e50503be336
+fc460a47453135373738383a313bf446164b72959c937b6f5e52484442434543637a4a46464f835cfd460a4544434445464b4c5f5f4be346
+fa010008fc13031d111a02f501ff0024051a4c738382786954402914145554060000136d3e0400030b16273b446678998873460d00e401
+fb36013738fc31022f322ff436263533374563695d57565a5d594f434274763836353f88633735383d434e5a5d728295978f6a3d35e436
+fa4609423f3f403f403d413d45f44625434755788f95938d867c6d5f514f7e824846454e92704746494c525c65687b8a9b9e98764d45e446
+f901fa00f101fe001f092143717871717272a5df883001015ddfc46d748190a8b8bfb69f72481e0500e201
+f536ff37013637f1362235343a48555f432b2d3e4fa5eba35934347fe5c779767b7c81888b9189796248373435e336
+e1462245444959708c8a81818789b7ecaa6644458ae2c7827f8383868c8e948e836d56474345e346
+f401fe00f201fb00170e2e4e707365c1e6b16c09088ef3f0d1c2c1c4b2845c2d11fc00e201
+de361c32313e50585635189fe1a77f38399ad8be927a7680877a694f40353434e036
+de461e42404b6177898476c7efc38f4849a1d4bd947e7a828b81735e4e4543454645e246
+f4010000f0011e0001000733516b857b8db1aecde2cdc5858edeedf3ece0d3cfaf7772755305de01
+e0361c35395a7282918183866fa4c9a3a58d95b3b0bfb3a599a9a8888f917637de36
+e046204548677d8fa4979db3accbe1cbc6a09db2acbeb3a597aaac8f989b804645464647e246
+df011b041a424e4d4a69747285ccbf679db98bdbbd887c5f47493522221802de01
+df361a3848666d67606f767387c3b074a5bd95d4c093846f6163574d4e46dd36
+df461a4756727a777387908d9ad3c788b3c59cd5c49a8a776d6e625b5c55dd46
+de01fc000d0102020633380593c5243f250202f900de01
+de36103533323333353536375b5f3993a748654ffe34ff33fe340035dd36
+de46044543424243fe440847686c47b0ba55725dfe44ff43fe440045dd46
+de01fb000001fc00026ec53df500de01
+de360035fb36ff35ff33053483ae593035f8360035de36
+de46044546464545fe46094544434494b567414445fe460045fe46ff45de46
+dd04ff05ff040005fc040b035e8d5a0404050504050405da04
+d939003afc3904357d9f7735fd390038d839
+db48fd4908484948484587a68245fd49014849d948
+</DATA>
+</Preview>
+LastModifiedBy=Robert Holmén
+</FileInfo>
+</MODEL>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=68176
+</MODELFILE>

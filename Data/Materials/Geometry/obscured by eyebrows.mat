@@ -1,0 +1,30 @@
+<MATERIALFILE>
+ProductVersion=17
+Release= PC
+<POSTEFFECTS>
+</POSTEFFECTS>
+<IMAGES>
+InstanceCropStyle=InsteadOfCache
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+<MATERIAL>
+<ATTRIBUTE>
+Name=Attribute
+ObscuredByLines=TRUE
+</ATTRIBUTE>
+<FileInfo>
+CreatedBy=Ken Baer
+LastModifiedBy=Steffen
+</FileInfo>
+</MATERIAL>
+</MATERIALS>
+<OBJECTS>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=245
+</MATERIALFILE>
