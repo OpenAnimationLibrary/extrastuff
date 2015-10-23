@@ -1,0 +1,36 @@
+<LIGHTFILE>
+ProductVersion=18
+Release= PC
+<POSTEFFECTS>
+</POSTEFFECTS>
+<IMAGES>
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+</MATERIALS>
+<OBJECTS>
+<LIGHT>
+End=0 0 166.667
+Rotate=0 0 0 1
+Length=166.667
+Type=Sun
+Width=150
+FallOff=150
+Color=168 230 253
+Intensity=45
+Specular=FALSE
+<CastShadows>
+Value=FALSE
+</CastShadows>
+<FileInfo>
+LastModifiedBy=Rodney Baker
+</FileInfo>
+</LIGHT>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=341
+</LIGHTFILE>

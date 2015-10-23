@@ -1,0 +1,37 @@
+<LIGHTFILE>
+ProductVersion=18
+Release= PC
+<POSTEFFECTS>
+</POSTEFFECTS>
+<IMAGES>
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+</MATERIALS>
+<OBJECTS>
+<LIGHT>
+End=0 0 166.667
+Rotate=0 0 0 1
+Length=166.667
+Type=Klieg
+Width=5
+FallOff=2500
+Intensity=20
+Specular=FALSE
+<CastShadows>
+Value=TRUE
+ShadowType=Z-Buffered
+ShadowMapSoftness=6.25
+</CastShadows>
+<FileInfo>
+LastModifiedBy=Rodney Baker
+</FileInfo>
+</LIGHT>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=369
+</LIGHTFILE>
