@@ -23,5 +23,16 @@ Steffen Gross
 |   |   |   |   |   |
 |   |   |   |   |   |
 
+
 External applications and utilities
+----------
+
+TROER (Malo)
+https://forums.hash.com/topic/40743-troer-obj2mdl-converter/  (See Blender Utilities)
+
+
+Blender utilities
+Model Importer (Nemyax)  https://sourceforge.net/p/blendamajigs/wiki/Animation%20Master%20importer/
+Model Exporter (Nemyax)  https://sourceforge.net/p/blendamajigs/wiki/Animation%20Master%20model%20exporter
+
 
