@@ -31,13 +31,13 @@
 ### Histogram
 - Histogram popup enhancements #4557 by shun-iwasawa
 ### Interface / GUI
+- Various UI updates by konero
+- Patch Stylesheet (Tabs, Light Theme) #4402 by konero 
 - Fix cropped input fields #4465 by Andeon
-- Existing scenes list in Startup Popup #4484 by justburne
+- Existing scenes list in Startup Popup #4484 by justburner
 ### Style Editor
 - Misc. updates to style editor brush pages #4572 by justburner
 ### Xsheet / Timeline
-- 
-### Xsheet (Export)
 - 
 ### Image Levels / Rendering / FFMPEG
 - Simplify uneditable check code #4487 by justburner 
@@ -50,8 +50,6 @@
 - New Fx: Flow Fx series #4633 by shun-iwasawa 
 - Spin Blur & Radial Blur fx gadgets: Lock AR / angle with modifier keys #4401 by shun-iwasawa 
 - Snap (Organize) Schematic Node #4567 by shun-iwasawa
-### Camera Capture / Stop Motion
--
 
 ... with many additional bug fixes, typo corrections, enhancements and more!
 
