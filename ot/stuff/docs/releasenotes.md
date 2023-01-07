@@ -2,7 +2,7 @@
 -----
 ### (New/Updated) Additonal Support for Various Image Formats
 - (See below)
-### (New) Clipboard
+### (New) Clipboard (External Copy/Paste into Opentoonz)
 - Paste external clipboard images #4681 by justburner (via Tahoma2D feature by JeremyBullock)
 ### (New) Custom Panels
 - Custom Panels #4495 by shun-iwasawa 
