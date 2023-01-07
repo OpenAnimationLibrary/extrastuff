@@ -1,22 +1,25 @@
 ## v1.7 (Draft) Release Notes 
-
+-----
+### (New/Updated) Additonal Support for Various Image Formats
+- (See below)
 ### (New) Clipboard
 - Paste external clipboard images #4681 by justburner (via Tahoma2D feature by JeremyBullock)
-### (New) Additonal Support for Various Image formats
-- (See below)
+### (New) Custom Panels
+- Custom Panels #4495 by shun-iwasawa 
 ### (New) Main Window See Through Mode 
 - Introduce Window Transparency feature #4542 by justburner 
+### (New) Open Cel Animation (OCA) Export
+- OCA Export #4483 by justburner
 ### (New) Preproduction Board 
 - Introduce Preproduction Board #4611 by morevnaproject, flurick and others 
-### (New) Open Cel Animation (OCA) Export
-- OCA Export #4483 by justburne
+-----
 ### Audio
 - Audio fixes and enhancements #4488 by justburner
 - Fix Rendered Sound starting too soon #4425 (Tahoma2D port)
 ### Brush Tool
 - Straight line mode on brush tool #4680 by justburner
-### Cleanup
-- N/A
+### Camera Capture / Cleanup
+- Camera Capture : Show subcamera center on mouse hover #4496 by shun-iwasawa
 ### Crash Reporting
 - Crash Handler #4500 by justburner
 ### Fill Tool
@@ -29,6 +32,7 @@
 - Histogram popup enhancements #4557 by shun-iwasawa
 ### Interface / GUI
 - Fix cropped input fields #4465 by Andeon
+- Existing scenes list in Startup Popup #4484 by justburne
 ### Style Editor
 - Misc. updates to style editor brush pages #4572 by justburner
 ### Xsheet / Timeline
@@ -42,7 +46,10 @@
 ### File Browser
 -
 ### Effects / Schematic
--
+- New Fx: Floor Bump Fx Iwa #4602 by shun-iwasawa 
+- New Fx: Flow Fx series #4633 by shun-iwasawa 
+- Spin Blur & Radial Blur fx gadgets: Lock AR / angle with modifier keys #4401 by shun-iwasawa 
+- Snap (Organize) Schematic Node #4567 by shun-iwasawa
 ### Camera Capture / Stop Motion
 -
 
