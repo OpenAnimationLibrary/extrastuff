@@ -1,5 +1,5 @@
 
-//Pointters.cpp Example:This program demonstrates the use of pointers in C++
+//Pointers.cpp Example:This program demonstrates the use of pointers in C++
 //It declares an integer variable x and a pointer p that points to x
 //It then prints the value of x, the memory address of x, the value of x using the pointer, and the memory address of x using the pointer
 //The output will be the value of x, the memory address of x, the value of x using the pointer, and the memory address of x using the pointer
