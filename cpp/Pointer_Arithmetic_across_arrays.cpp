@@ -1,7 +1,7 @@
 //Simple exwample of running pointer arithmetic across arrays
 
 //Example:
-
+//This is a new comment
 #include <stdio.h>
 #include <stdlib.h>
 
