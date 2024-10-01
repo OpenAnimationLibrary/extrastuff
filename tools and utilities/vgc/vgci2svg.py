@@ -1,3 +1,4 @@
+#This script is licensed CC-0.  For more information please see: <http://creativecommons.org/publicdomain/zero/1.0/>
 import xml.etree.ElementTree as ET
 import ast
 import tkinter as tk
