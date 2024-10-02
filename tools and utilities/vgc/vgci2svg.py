@@ -1,4 +1,6 @@
 #This script authored by Rodney Baker and licensed CC-0.  For more information please see: <http://creativecommons.org/publicdomain/zero/1.0/>
+#10/2/2024 Additional improvements to script suggesteed by Boris Dalstein (https://www.vgc.io/news)
+#Please support his work on VGC Illustration which is leading to VGC Animation
 import xml.etree.ElementTree as ET
 import ast
 import tkinter as tk
@@ -14,6 +16,9 @@ except ImportError:
     cairosvg = None
 
 def vgc_to_svg(vgc_content):
+    """
+    Converts VGCI content to SVG format without applying inputtransform to positions.
+    """
     # Parse the XML content
     root = ET.fromstring(vgc_content)
     
@@ -33,22 +38,26 @@ def vgc_to_svg(vgc_content):
         color_str = edge.get('color')
         inputtransform_str = edge.get('inputtransform')
         
-        positions = ast.literal_eval(positions_str)
-        widths = ast.literal_eval(widths_str)
-        color = color_str  # Use the original color
+        # Parse positions and widths
+        try:
+            positions = ast.literal_eval(positions_str)
+            widths = ast.literal_eval(widths_str)
+        except Exception as e:
+            # Handle parsing errors
+            print(f"Error parsing positions or widths: {e}")
+            continue
         
-        # Parse inputtransform
-        inputtransform = ast.literal_eval(inputtransform_str)
-        # Extract translation components (c, f)
-        c = inputtransform[0][2]
-        f = inputtransform[1][2]
+        color = color_str  # Use the original color without inversion
         
-        # Apply transformation to positions
-        transformed_positions = [ (x + c, y + f) for x, y in positions ]
+        # NOTE: Do not apply inputtransform to positions
+        # inputtransform is intended for inputpositions only
         
-        # Update min and max values
-        xs = [ x for x, y in transformed_positions ]
-        ys = [ y for x, y in transformed_positions ]
+        # Use positions as-is
+        transformed_positions = positions
+        
+        # Update min and max values based on positions
+        xs = [x for x, y in transformed_positions]
+        ys = [y for x, y in transformed_positions]
         
         min_x = min(min_x, min(xs))
         min_y = min(min_y, min(ys))
@@ -70,6 +79,13 @@ def vgc_to_svg(vgc_content):
         # Prevent division by zero
         total_width = total_height = 1
 
+    # Add a white background rectangle to the SVG
+    background = ET.SubElement(svg, 'rect', {
+        'width': str(total_width),
+        'height': str(total_height),
+        'fill': 'white'
+    })
+
     # Now create path elements for each edge
     for edge_data in all_edges:
         transformed_positions = edge_data['positions']
@@ -80,6 +96,8 @@ def vgc_to_svg(vgc_content):
         shifted_positions = [ (x - min_x, y - min_y) for x, y in transformed_positions ]
         
         # Create path data string
+        if not shifted_positions:
+            continue  # No positions to draw
         path_data = "M {} {}".format(*shifted_positions[0])
         for x, y in shifted_positions[1:]:
             path_data += " L {} {}".format(x, y)
@@ -96,13 +114,16 @@ def vgc_to_svg(vgc_content):
         })
     
     # Set the viewBox attribute on the SVG element
-    svg.set('viewBox', '0 0 {} {}'.format(total_width, total_height))
+    svg.set('viewBox', f'0 0 {total_width} {total_height}')
     
     # Convert the SVG element tree to a string
     svg_string = ET.tostring(svg, encoding='unicode')
     return svg_string
 
 def svg_to_vgci(svg_content):
+    """
+    Converts SVG content to VGCI format, correctly handling open and closed paths.
+    """
     # Parse the SVG content
     svg_root = ET.fromstring(svg_content)
     svg_ns = "http://www.w3.org/2000/svg"
@@ -121,12 +142,18 @@ def svg_to_vgci(svg_content):
         width = height = 0  # Will adjust based on content
     
     # Iterate over path elements
-    for path_elem in svg_root.findall('.//{http://www.w3.org/2000/svg}path'):
+    for path_elem in svg_root.findall('.//{%s}path' % svg_ns):
         d_attr = path_elem.get('d')
         stroke_width = path_elem.get('stroke-width', '1')
         stroke_color = path_elem.get('stroke', 'rgb(0,0,0)')
         
+        # Determine if the path is closed
+        is_closed = False
+        if re.search(r'[Zz]', d_attr):
+            is_closed = True
+        
         # Parse the path data (supports only 'M' and 'L' commands)
+        # This regex will not capture 'Z' or 'z' commands
         commands = re.findall(r'([ML])\s*([-\d.]+)[,\s]+([-\d.]+)', d_attr)
         positions = []
         widths = []
@@ -135,6 +162,11 @@ def svg_to_vgci(svg_content):
             y = float(y_str) + min_y
             positions.append((x, y))
             widths.append(float(stroke_width))
+        
+        # If the path is closed, ensure the first and last positions are the same
+        if is_closed:
+            if positions and positions[0] != positions[-1]:
+                positions.append(positions[0])
         
         # Create the edge element
         edge = ET.Element('edge', {
@@ -158,7 +190,7 @@ def svg_to_vgci(svg_content):
 class VGCtoSVGConverter:
     def __init__(self, root):
         self.root = root
-        self.root.title("VGC Illustration Converter")
+        self.root.title("VGC2SVG - a VGC Illustration Converter")
         self.create_widgets()
         self.vgci_content = None
         self.svg_content = None
