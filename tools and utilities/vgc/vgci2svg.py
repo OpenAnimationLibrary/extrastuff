@@ -232,7 +232,7 @@ def svg_to_vgci(svg_content):
         vgc.append(edge)
     
         # Create the vertex elements.
-        # We create them after the edge to maintain logical ordering.
+        # We create them after the edge to maintain logical ordering.  It's best to keep them above the edge.
         if not is_closed:
             vertex_start = ET.Element('vertex', {
                 'position': str(startvertex_position),
