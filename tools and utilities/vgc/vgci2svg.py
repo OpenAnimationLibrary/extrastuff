@@ -147,6 +147,7 @@ def svg_to_vgci(svg_content):
         width = height = 0  # Will adjust based on content
     
     # Iterate over path elements
+    vertex_id = 1
     for path_elem in svg_root.findall('.//{%s}path' % svg_ns):
         d_attr = path_elem.get('d')
         stroke_width = path_elem.get('stroke-width', '1')
@@ -167,27 +168,44 @@ def svg_to_vgci(svg_content):
             y = float(y_str) + min_y
             positions.append((x, y))
             widths.append(float(stroke_width))
-        
-        # If the path is closed, ensure the first and last positions are the same
-        if is_closed:
-            if positions and positions[0] != positions[-1]:
-                positions.append(positions[0])
-        
-        # Create the edge element
-        edge = ET.Element('edge', {
+
+        # Discard the path if empty
+        if not positions:
+            continue
+
+        edge_attributes = {
             'positions': str(positions),
             'widths': str(widths),
             'color': stroke_color,
-            # Assuming no transformations
-            'inputtransform': '((1, 0, 0), (0, 1, 0), (0, 0, 1))',
-            'inputpenwidth': stroke_width,
-            # Placeholder attributes
-            'inputpositions': str(positions),
-            'inputpressures': str([0.5] * len(positions)),
-            'inputtimestamps': str([0] * len(positions)),
-        })
+        }
+
+        # If the path is open, the edge has start/end vertices
+        if not is_closed:
+            startvertex_id = f'v{vertex_id}'
+            vertex_id += 1
+            endvertex_id = f'v{vertex_id}'
+            vertex_id += 1
+            startvertex_position = positions[0]
+            endvertex_position = positions[-1]
+            edge_attributes['startvertex'] = f'#{startvertex_id}'
+            edge_attributes['endvertex'] = f'#{endvertex_id}'
+        
+        # Create the edge element
+        edge = ET.Element('edge', edge_attributes)
         vgc.append(edge)
     
+        # Create the vertex elements.
+        # We create them after the edge as it's best to keep them above the edge.
+        if not is_closed:
+            vgc.append(ET.Element('vertex', {
+                'position': str(startvertex_position),
+                'id': str(startvertex_id)
+            }))
+            vgc.append(ET.Element('vertex', {
+                'position': str(endvertex_position),
+                'id': str(endvertex_id)
+            }))
+
     # Convert the VGC element tree to a string
     vgci_string = ET.tostring(vgc, encoding='unicode')
     return vgci_string
