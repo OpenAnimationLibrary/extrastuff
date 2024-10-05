@@ -1,6 +1,8 @@
 #This script authored by Rodney Baker and licensed CC-0.  For more information please see: <http://creativecommons.org/publicdomain/zero/1.0/>
-#10/2/2024 Additional improvements to script suggesteed by Boris Dalstein (https://www.vgc.io/news)
+#10/2/2024 Additional improvements to script suggested by Boris Dalstein (https://www.vgc.io/news)
 #Please support his work on VGC Illustration which is leading to VGC Animation
+#10/5/2024 Handling of open edges vs. closed edges
+
 import xml.etree.ElementTree as ET
 import ast
 import tkinter as tk
@@ -17,7 +19,7 @@ except ImportError:
 
 def vgc_to_svg(vgc_content):
     """
-    Converts VGCI content to SVG format without applying inputtransform to positions.
+    Converts VGCI content to SVG format.
     """
     # Parse the XML content
     root = ET.fromstring(vgc_content)
@@ -33,12 +35,10 @@ def vgc_to_svg(vgc_content):
     all_edges = []
     
     for edge in root.findall('.//edge'):
-        positions_str = edge.get('positions')
-        widths_str = edge.get('widths')
-        color_str = edge.get('color')
-        inputtransform_str = edge.get('inputtransform')
         
         # Parse positions and widths
+        positions_str = edge.get('positions')
+        widths_str = edge.get('widths')
         try:
             positions = ast.literal_eval(positions_str)
             widths = ast.literal_eval(widths_str)
@@ -47,12 +47,8 @@ def vgc_to_svg(vgc_content):
             print(f"Error parsing positions or widths: {e}")
             continue
         
-        color = color_str  # Use the original color without inversion
-        
-        # NOTE: Do not apply inputtransform to positions
-        # inputtransform is intended for inputpositions only
-        
-        # Use positions as-is
+        # For now, we use positions as-is.
+        # TODO: apply the 'transform' matrix (not yet in VGC as of Oct 2024).
         transformed_positions = positions
         
         # Update min and max values based on positions
@@ -68,7 +64,10 @@ def vgc_to_svg(vgc_content):
         all_edges.append({
             'positions': transformed_positions,
             'widths': widths,
-            'color': color
+            'color': edge.get('color'),
+            'startvertex': edge.get('startvertex'),
+            'endvertex': edge.get('endvertex'),
+            
         })
     
     # Compute total width and height for the viewBox
@@ -101,7 +100,13 @@ def vgc_to_svg(vgc_content):
         path_data = "M {} {}".format(*shifted_positions[0])
         for x, y in shifted_positions[1:]:
             path_data += " L {} {}".format(x, y)
-        
+        if edge_data['startvertex'] == edge_data['endvertex']:
+            # This means that the edge is either:
+            # - closed (startvertex = endvertex = None), or
+            # - open with glued end vertices (startvertex = endvertex = '#v42')
+            # It both cases it makes sense to convert this as an SVG closed path
+            path_data += "Z"
+
         # Use the first width value or default to '1'
         stroke_width = str(widths[0]) if widths else '1'
         
