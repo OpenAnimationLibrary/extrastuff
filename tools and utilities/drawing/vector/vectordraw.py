@@ -8,6 +8,7 @@ import os
 import sys
 import requests
 import re
+from datetime import datetime
 
 class VectorLineDrawer:
     def __init__(self, master, loaded_file=None):
