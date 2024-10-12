@@ -1,5 +1,4 @@
 # Version: 2024-10-12
-#This script authored by Rodney Baker and licensed CC-0.  For more information please see: <http://creativecommons.org/publicdomain/zero/1.0/>
 import tkinter as tk
 from tkinter import filedialog, colorchooser, simpledialog, messagebox
 import webbrowser
@@ -8,7 +7,7 @@ import xml.etree.ElementTree as ET
 import os
 import sys
 import requests
-from datetime import datetime
+import re
 
 class VectorLineDrawer:
     def __init__(self, master, loaded_file=None):
@@ -186,23 +185,31 @@ class VectorLineDrawer:
         try:
             response = requests.get(self.update_url)
             if response.status_code == 200:
-                local_file_path = os.path.abspath(__file__)
-                local_mod_time = datetime.fromtimestamp(os.path.getmtime(local_file_path))
-                online_mod_time = response.headers.get('Last-Modified')
-                if online_mod_time:
-                    online_mod_time = datetime.strptime(online_mod_time, "%a, %d %b %Y %H:%M:%S %Z")
-                    if online_mod_time > local_mod_time:
-                        with open(local_file_path, 'w', encoding='utf-8') as file:
-                            file.write(response.text)
-                        messagebox.showinfo("Update", "The application has been updated. Please restart the program.")
-                    else:
-                        messagebox.showinfo("Update", "You already have the latest version.")
+                online_content = response.text
+                local_version = self.get_version_from_content(self.get_local_content())
+                online_version = self.get_version_from_content(online_content)
+                if online_version > local_version:
+                    local_file_path = os.path.abspath(__file__)
+                    with open(local_file_path, 'w', encoding='utf-8') as file:
+                        file.write(online_content)
+                    messagebox.showinfo("Update", "The application has been updated. Please restart the program.")
                 else:
-                    messagebox.showinfo("Update", "Could not determine the last modified date of the online file.")
+                    messagebox.showinfo("Update", "You already have the latest version.")
             else:
                 messagebox.showerror("Update", "Failed to check for updates. Status code: {}".format(response.status_code))
         except Exception as e:
             messagebox.showerror("Update", "An error occurred while checking for updates: {}".format(e))
+
+    def get_version_from_content(self, content):
+        version_match = re.search(r"# Version: (\d{4}-\d{2}-\d{2})", content)
+        if version_match:
+            return datetime.strptime(version_match.group(1), "%Y-%m-%d")
+        return datetime.min
+
+    def get_local_content(self):
+        local_file_path = os.path.abspath(__file__)
+        with open(local_file_path, 'r', encoding='utf-8') as file:
+            return file.read()
 
 if __name__ == "__main__":
     loaded_file = sys.argv[1] if len(sys.argv) > 1 else None
