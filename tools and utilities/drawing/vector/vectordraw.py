@@ -1,10 +1,13 @@
 #This script authored by Rodney Baker and licensed CC-0.  For more information please see: <http://creativecommons.org/publicdomain/zero/1.0/>
 import tkinter as tk
-from tkinter import filedialog, colorchooser
+from tkinter import filedialog, colorchooser, simpledialog, messagebox
+import webbrowser
 import svgwrite
 import xml.etree.ElementTree as ET
 import os
 import sys
+import requests
+from datetime import datetime
 
 class VectorLineDrawer:
     def __init__(self, master, loaded_file=None):
@@ -21,6 +24,8 @@ class VectorLineDrawer:
         self.pen_color = 'black'
         self.pen_width = 1
         self.loaded_file = loaded_file
+        self.documentation_url = "https://github.com/OpenAnimationLibrary/extrastuff/blob/master/tools%20and%20utilities/drawing/vector/readme.md"
+        self.update_url = "https://github.com/OpenAnimationLibrary/extrastuff/blob/master/tools%20and%20utilities/drawing/vector/vectordraw.py"
         
         self.canvas.bind("<ButtonPress-1>", self.on_press)
         self.canvas.bind("<B1-Motion>", self.on_drag)
@@ -53,6 +58,12 @@ class VectorLineDrawer:
         options_menu = tk.Menu(menu_bar, tearoff=0)
         menu_bar.add_cascade(label="Options", menu=options_menu)
         options_menu.add_command(label="Select Pen Color", command=self.select_pen_color)
+        
+        help_menu = tk.Menu(menu_bar, tearoff=0)
+        menu_bar.add_cascade(label="Help", menu=help_menu)
+        help_menu.add_command(label="Open Documentation", command=self.open_documentation)
+        help_menu.add_command(label="Edit Documentation URL", command=self.edit_documentation_url)
+        help_menu.add_command(label="Check for Updates", command=self.check_for_updates)
 
     def bind_shortcuts(self):
         self.master.bind("<Control-z>", lambda event: self.undo())
@@ -162,8 +173,38 @@ class VectorLineDrawer:
         python = sys.executable
         os.execl(python, python, *sys.argv, self.loaded_file if self.loaded_file else "")
 
+    def open_documentation(self):
+        webbrowser.open(self.documentation_url)
+
+    def edit_documentation_url(self):
+        new_url = simpledialog.askstring("Edit Documentation URL", "Enter the new documentation URL:", initialvalue=self.documentation_url)
+        if new_url:
+            self.documentation_url = new_url
+
+    def check_for_updates(self):
+        try:
+            response = requests.get(self.update_url)
+            if response.status_code == 200:
+                local_file_path = os.path.abspath(__file__)
+                local_mod_time = datetime.fromtimestamp(os.path.getmtime(local_file_path))
+                online_mod_time = response.headers.get('Last-Modified')
+                if online_mod_time:
+                    online_mod_time = datetime.strptime(online_mod_time, "%a, %d %b %Y %H:%M:%S %Z")
+                    if online_mod_time > local_mod_time:
+                        with open(local_file_path, 'w') as file:
+                            file.write(response.text)
+                        messagebox.showinfo("Update", "The application has been updated. Please restart the program.")
+                    else:
+                        messagebox.showinfo("Update", "You already have the latest version.")
+                else:
+                    messagebox.showinfo("Update", "Could not determine the last modified date of the online file.")
+            else:
+                messagebox.showerror("Update", "Failed to check for updates. Status code: {}".format(response.status_code))
+        except Exception as e:
+            messagebox.showerror("Update", "An error occurred while checking for updates: {}".format(e))
+
 if __name__ == "__main__":
     loaded_file = sys.argv[1] if len(sys.argv) > 1 else None
     root = tk.Tk()
     app = VectorLineDrawer(master=root, loaded_file=loaded_file)
-    root.mainloop()
+   
