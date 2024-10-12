@@ -1,4 +1,4 @@
-# Version: 2024-10-12.6
+# Version: 2024-10-12.7
 import tkinter as tk
 from tkinter import filedialog, colorchooser, simpledialog, messagebox, Toplevel, Label
 import webbrowser
@@ -24,6 +24,8 @@ class VectorLineDrawer:
         self.redo_stack = []
         self.pen_color = 'black'
         self.pen_width = 1
+        self.pen_min_width = 1
+        self.pen_max_width = 10
         self.loaded_file = loaded_file
         self.documentation_url = "https://github.com/OpenAnimationLibrary/extrastuff/blob/master/tools%20and%20utilities/drawing/vector/readme.md"
         self.update_url = "https://raw.githubusercontent.com/OpenAnimationLibrary/extrastuff/master/tools%20and%20utilities/drawing/vector/vectordraw.py"
@@ -73,15 +75,30 @@ class VectorLineDrawer:
         self.master.bind("<Control-s>", lambda event: self.save_as_svg())
 
     def create_widgets(self):
-        self.brush_size_label = tk.Label(self.master, text="Brush Size:")
+        self.brush_size_label = tk.Label(self.master, text="Brush Size (Min/Max):")
         self.brush_size_label.pack(side=tk.LEFT, padx=5)
         
-        self.brush_size_slider = tk.Scale(self.master, from_=0, to=100, orient=tk.HORIZONTAL, command=self.update_brush_size)
-        self.brush_size_slider.set(self.pen_width)
-        self.brush_size_slider.pack(side=tk.LEFT)
+        self.brush_min_size_slider = tk.Scale(self.master, from_=0, to=50, orient=tk.HORIZONTAL, label="Min", command=self.update_brush_min_size)
+        self.brush_min_size_slider.set(self.pen_min_width)
+        self.brush_min_size_slider.pack(side=tk.LEFT)
+        
+        self.brush_max_size_slider = tk.Scale(self.master, from_=1, to=100, orient=tk.HORIZONTAL, label="Max", command=self.update_brush_max_size)
+        self.brush_max_size_slider.set(self.pen_max_width)
+        self.brush_max_size_slider.pack(side=tk.LEFT)
 
-    def update_brush_size(self, value):
-        self.pen_width = int(value)
+    def update_brush_min_size(self, value):
+        self.pen_min_width = int(value)
+        if self.pen_min_width > self.pen_max_width:
+            self.pen_max_width = self.pen_min_width
+            self.brush_max_size_slider.set(self.pen_max_width)
+        self.pen_width = self.pen_min_width
+
+    def update_brush_max_size(self, value):
+        self.pen_max_width = int(value)
+        if self.pen_max_width < self.pen_min_width:
+            self.pen_min_width = self.pen_max_width
+            self.brush_min_size_slider.set(self.pen_min_width)
+        self.pen_width = self.pen_max_width
 
     def select_pen_color(self):
         color_code = colorchooser.askcolor(title="Choose Pen Color")[1]
