@@ -65,6 +65,7 @@ class VectorLineDrawer:
         help_menu.add_command(label="Open Documentation", command=self.open_documentation)
         help_menu.add_command(label="Edit Documentation URL", command=self.edit_documentation_url)
         help_menu.add_command(label="Check for Updates", command=self.check_for_updates)
+        help_menu.add_command(label="About", command=self.show_about)
 
     def bind_shortcuts(self):
         self.master.bind("<Control-z>", lambda event: self.undo())
@@ -211,6 +212,10 @@ class VectorLineDrawer:
         local_file_path = os.path.abspath(__file__)
         with open(local_file_path, 'r', encoding='utf-8') as file:
             return file.read()
+
+    def show_about(self):
+        version = self.get_version_from_content(self.get_local_content())
+        messagebox.showinfo("About", f"Vector Line Drawing Program\nVersion: {version.strftime('%Y-%m-%d')}")
 
 if __name__ == "__main__":
     loaded_file = sys.argv[1] if len(sys.argv) > 1 else None
