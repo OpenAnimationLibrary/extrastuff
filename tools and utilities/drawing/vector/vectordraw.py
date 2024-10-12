@@ -1,4 +1,4 @@
-# Version: 2024-10-12.2
+# Version: 2024-10-12.3
 import tkinter as tk
 from tkinter import filedialog, colorchooser, simpledialog, messagebox, Toplevel, Label
 import webbrowser
@@ -10,7 +10,7 @@ import requests
 import re
 import base64
 from datetime import datetime
-from PIL import Image, ImageTk
+from PIL import Image, ImageTk, UnidentifiedImageError
 from io import BytesIO
 
 class VectorLineDrawer:
@@ -239,7 +239,7 @@ class VectorLineDrawer:
                 splash_image = Image.open(self.splash_file)
             else:
                 splash_data = (
-                    "iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAABLUlEQVR4nO3YMQrDMBAAQSnk/19WKkOS9gxZyEwlFwbhRWfQPucsOh6/3gCfBIkRJEaQGEFiBIkRJOY5eXnvfdZa65yzr/X1PN3Yv7r9hIgxMwry/fHFmLvlhLyPK2b81GPGQa4xZVzdY7vtbTGyYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYl4roh67TphhxwAAAABJRU5ErkJggg=="
+                    "iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAABLUlEQVR4nO3YMQrDMBAAQSnk/19WKkOS9gxZyEwlFwbhRWfQPucsOh6/3gCfBIkRJEaQGEFiBIkRJOY5eXnvfdZa65yzr/X1PN3Yv7r9hIgxMwry/fHFmLvlhLyPK2b81GPGQa4xZVzdY7vtbTGyYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYl4roh67TphhxwAAAABJRU5ErkJggg=="
                 )
                 splash_image = Image.open(BytesIO(base64.b64decode(splash_data)))
             splash_photo = ImageTk.PhotoImage(splash_image)
@@ -247,6 +247,8 @@ class VectorLineDrawer:
             splash_label = Label(about_window, image=splash_photo)
             splash_label.image = splash_photo
             splash_label.pack(pady=10)
+        except UnidentifiedImageError:
+            messagebox.showerror("Image Error", "Failed to identify splash image file.")
         except Exception as e:
             messagebox.showerror("Image Error", f"Failed to load splash image: {e}")
 
