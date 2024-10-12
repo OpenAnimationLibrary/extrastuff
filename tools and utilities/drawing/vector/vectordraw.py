@@ -1,4 +1,4 @@
-# Version: 2024-10-12
+# Version: 2024-10-12.2
 import tkinter as tk
 from tkinter import filedialog, colorchooser, simpledialog, messagebox, Toplevel, Label
 import webbrowser
@@ -11,6 +11,7 @@ import re
 import base64
 from datetime import datetime
 from PIL import Image, ImageTk
+from io import BytesIO
 
 class VectorLineDrawer:
     def __init__(self, master, loaded_file=None):
@@ -231,20 +232,23 @@ class VectorLineDrawer:
         version = self.get_version_from_content(self.get_local_content())
         about_window = Toplevel(self.master)
         about_window.title("About")
-        about_window.geometry("300x200")
+        about_window.geometry("300x300")
 
-        if os.path.exists(self.splash_file):
-            splash_image = Image.open(self.splash_file)
-        else:
-            splash_data = (
-                "iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAABLUlEQVR4nO3YMQrDMBAAQSnk/19WKkOS9gxZyEwlFwbhRWfQPucsOh6/3gCfBIkRJEaQGEFiBIkRJOY5eXnvfdZa65yzr/X1PN3Yv7r9hIgxMwry/fHFmLvlhLyPK2b81GPGQa4xZVzdY7vtbTGyYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYl4roh67TphhxwAAAABJRU5ErkJggg=="
-            )
-            splash_image = Image.open(BytesIO(base64.b64decode(splash_data)))
-        splash_photo = ImageTk.PhotoImage(splash_image)
+        try:
+            if os.path.exists(self.splash_file):
+                splash_image = Image.open(self.splash_file)
+            else:
+                splash_data = (
+                    "iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAABLUlEQVR4nO3YMQrDMBAAQSnk/19WKkOS9gxZyEwlFwbhRWfQPucsOh6/3gCfBIkRJEaQGEFiBIkRJOY5eXnvfdZa65yzr/X1PN3Yv7r9hIgxMwry/fHFmLvlhLyPK2b81GPGQa4xZVzdY7vtbTGyYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYl4roh67TphhxwAAAABJRU5ErkJggg=="
+                )
+                splash_image = Image.open(BytesIO(base64.b64decode(splash_data)))
+            splash_photo = ImageTk.PhotoImage(splash_image)
 
-        splash_label = Label(about_window, image=splash_photo)
-        splash_label.image = splash_photo
-        splash_label.pack(pady=10)
+            splash_label = Label(about_window, image=splash_photo)
+            splash_label.image = splash_photo
+            splash_label.pack(pady=10)
+        except Exception as e:
+            messagebox.showerror("Image Error", f"Failed to load splash image: {e}")
 
         version_label = Label(about_window, text=f"Vector Line Drawing Program\nVersion: {version.strftime('%Y-%m-%d')}")
         version_label.pack(pady=10)
