@@ -1,4 +1,4 @@
-# Version: 2024-10-12.7
+# Version: 2024-10-12.8
 import tkinter as tk
 from tkinter import filedialog, colorchooser, simpledialog, messagebox, Toplevel, Label
 import webbrowser
@@ -29,6 +29,7 @@ class VectorLineDrawer:
         self.loaded_file = loaded_file
         self.documentation_url = "https://github.com/OpenAnimationLibrary/extrastuff/blob/master/tools%20and%20utilities/drawing/vector/readme.md"
         self.update_url = "https://raw.githubusercontent.com/OpenAnimationLibrary/extrastuff/master/tools%20and%20utilities/drawing/vector/vectordraw.py"
+        self.pen_pressure_enabled = True
         
         self.canvas.bind("<ButtonPress-1>", self.on_press)
         self.canvas.bind("<B1-Motion>", self.on_drag)
@@ -61,6 +62,7 @@ class VectorLineDrawer:
         options_menu = tk.Menu(menu_bar, tearoff=0)
         menu_bar.add_cascade(label="Options", menu=options_menu)
         options_menu.add_command(label="Select Pen Color", command=self.select_pen_color)
+        options_menu.add_command(label="Toggle Pen Pressure", command=self.toggle_pen_pressure)
         
         help_menu = tk.Menu(menu_bar, tearoff=0)
         menu_bar.add_cascade(label="Help", menu=help_menu)
@@ -100,6 +102,11 @@ class VectorLineDrawer:
             self.brush_min_size_slider.set(self.pen_min_width)
         self.pen_width = self.pen_max_width
 
+    def toggle_pen_pressure(self):
+        self.pen_pressure_enabled = not self.pen_pressure_enabled
+        status = "enabled" if self.pen_pressure_enabled else "disabled"
+        messagebox.showinfo("Pen Pressure", f"Pen pressure is now {status}.")
+
     def select_pen_color(self):
         color_code = colorchooser.askcolor(title="Choose Pen Color")[1]
         if color_code:
@@ -107,9 +114,13 @@ class VectorLineDrawer:
 
     def on_press(self, event):
         self.current_path = [(event.x, event.y)]
+        if self.pen_pressure_enabled:
+            self.pen_width = self.pen_min_width
 
     def on_drag(self, event):
         if self.current_path is not None:
+            pressure_factor = (event.y / self.canvas.winfo_height()) if self.pen_pressure_enabled else 1
+            self.pen_width = max(self.pen_min_width, min(self.pen_max_width, int(self.pen_min_width + (self.pen_max_width - self.pen_min_width) * pressure_factor)))
             self.current_path.append((event.x, event.y))
             self.canvas.delete("current_line")  # Delete the previous line to create a smooth effect
             self.canvas.create_line(self.current_path, fill=self.pen_color, width=self.pen_width, tags="current_line", smooth=True, capstyle=tk.ROUND)
