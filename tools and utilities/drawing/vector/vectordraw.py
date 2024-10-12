@@ -1,3 +1,4 @@
+# Version: 2024-10-12
 #This script authored by Rodney Baker and licensed CC-0.  For more information please see: <http://creativecommons.org/publicdomain/zero/1.0/>
 import tkinter as tk
 from tkinter import filedialog, colorchooser, simpledialog, messagebox
@@ -25,7 +26,7 @@ class VectorLineDrawer:
         self.pen_width = 1
         self.loaded_file = loaded_file
         self.documentation_url = "https://github.com/OpenAnimationLibrary/extrastuff/blob/master/tools%20and%20utilities/drawing/vector/readme.md"
-        self.update_url = "https://github.com/OpenAnimationLibrary/extrastuff/blob/master/tools%20and%20utilities/drawing/vector/vectordraw.py"
+        self.update_url = "https://raw.githubusercontent.com/OpenAnimationLibrary/extrastuff/master/tools%20and%20utilities/drawing/vector/vectordraw.py"
         
         self.canvas.bind("<ButtonPress-1>", self.on_press)
         self.canvas.bind("<B1-Motion>", self.on_drag)
@@ -131,7 +132,7 @@ class VectorLineDrawer:
             for i in range(1, len(path)):
                 start_x, start_y = path[i - 1]
                 end_x, end_y = path[i]
-                dwg.add(dwg.line(start=(start_x, start_y), end=(end_x, end_y), stroke=svgwrite.utils.rgb(0, 0, 0) if color == 'black' else color, stroke_width=width, stroke_linecap='round'))
+                dwg.add(dwg.line(start=(start_x, start_y), end=(end_x, end_y), stroke=color, stroke_width=width, stroke_linecap='round'))
         dwg.save()
 
     def load_svg_dialog(self):
@@ -191,7 +192,7 @@ class VectorLineDrawer:
                 if online_mod_time:
                     online_mod_time = datetime.strptime(online_mod_time, "%a, %d %b %Y %H:%M:%S %Z")
                     if online_mod_time > local_mod_time:
-                        with open(local_file_path, 'w') as file:
+                        with open(local_file_path, 'w', encoding='utf-8') as file:
                             file.write(response.text)
                         messagebox.showinfo("Update", "The application has been updated. Please restart the program.")
                     else:
@@ -207,4 +208,4 @@ if __name__ == "__main__":
     loaded_file = sys.argv[1] if len(sys.argv) > 1 else None
     root = tk.Tk()
     app = VectorLineDrawer(master=root, loaded_file=loaded_file)
-   
+    root.mainloop()
