@@ -237,7 +237,7 @@ class VectorLineDrawer:
             splash_image = Image.open(self.splash_file)
         else:
             splash_data = (
-                "R0lGODlhEAAQAMQfAFVVVf/9/f39/f7+/vLy8tLS0vDw8NnZ2czMzKmpqaioqOrq6l5eXnR0dKioqFhYWAcHByEhIR4eHpubm729vd3d3bGxsWdnZ8vLy8/Pz4ODg729vX5+fpKSksvLy93d3e7u7urq6gAAAAAAAAAAACH5BAEAAB8ALAAAAAAQABAAAAV58CeOZGmeaKqubOt2cCzPDnnYgiQFHgSEohkGgOjcOp/EwvFoLAoNYQFCcFyDBDAkQHhIRBAOOEKgRBANBQJxiUKAcHRV3mDNME0GC1eQA7"
+                "iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAABLUlEQVR4nO3YMQrDMBAAQSnk/19WKkOS9gxZyEwlFwbhRWfQPucsOh6/3gCfBIkRJEaQGEFiBIkRJOY5eXnvfdZa65yzr/X1PN3Yv7r9hIgxMwry/fHFmLvlhLyPK2b81GPGQa4xZVzdY7vtbTGyYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYgSJESRGkBhBYl4roh67TphhxwAAAABJRU5ErkJggg=="
             )
             splash_image = Image.open(BytesIO(base64.b64decode(splash_data)))
         splash_photo = ImageTk.PhotoImage(splash_image)
