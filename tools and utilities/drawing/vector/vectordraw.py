@@ -1,4 +1,4 @@
-# Version: 2024-10-12.5
+# Version: 2024-10-12.6
 import tkinter as tk
 from tkinter import filedialog, colorchooser, simpledialog, messagebox, Toplevel, Label
 import webbrowser
@@ -8,10 +8,7 @@ import os
 import sys
 import requests
 import re
-import base64
 from datetime import datetime
-from PIL import Image, ImageTk, UnidentifiedImageError
-from io import BytesIO
 
 class VectorLineDrawer:
     def __init__(self, master, loaded_file=None):
@@ -30,8 +27,6 @@ class VectorLineDrawer:
         self.loaded_file = loaded_file
         self.documentation_url = "https://github.com/OpenAnimationLibrary/extrastuff/blob/master/tools%20and%20utilities/drawing/vector/readme.md"
         self.update_url = "https://raw.githubusercontent.com/OpenAnimationLibrary/extrastuff/master/tools%20and%20utilities/drawing/vector/vectordraw.py"
-        self.splash_url = "https://raw.githubusercontent.com/OpenAnimationLibrary/extrastuff/master/tools%20and%20utilities/drawing/vector/splash.png"
-        self.splash_file = "splash.png"
         
         self.canvas.bind("<ButtonPress-1>", self.on_press)
         self.canvas.bind("<B1-Motion>", self.on_drag)
@@ -199,7 +194,6 @@ class VectorLineDrawer:
                     local_file_path = os.path.abspath(__file__)
                     with open(local_file_path, 'w', encoding='utf-8') as file:
                         file.write(online_content)
-                    self.download_splash()
                     messagebox.showinfo("Update", "The application has been updated. Please restart the program.")
                 else:
                     messagebox.showinfo("Update", "You already have the latest version.")
@@ -219,36 +213,14 @@ class VectorLineDrawer:
         with open(local_file_path, 'r', encoding='utf-8') as file:
             return file.read()
 
-    def download_splash(self):
-        try:
-            response = requests.get(self.splash_url, stream=True)
-            if response.status_code == 200:
-                response.raw.decode_content = True
-                with open(self.splash_file, 'wb') as file:
-                    file.write(response.content)
-        except Exception as e:
-            messagebox.showerror("Download Error", "Failed to download splash image: {}".format(e))
-
     def show_about(self):
         version = self.get_version_from_content(self.get_local_content())
         about_window = Toplevel(self.master)
         about_window.title("About")
-        about_window.geometry("300x150")
-
-        if os.path.exists(self.splash_file):
-            try:
-                splash_image = Image.open(self.splash_file).convert("RGBA")
-                splash_photo = ImageTk.PhotoImage(splash_image)
-                splash_label = Label(about_window, image=splash_photo)
-                splash_label.image = splash_photo
-                splash_label.pack(pady=10)
-            except UnidentifiedImageError:
-                messagebox.showerror("Image Error", "Failed to identify splash image file.")
-            except Exception as e:
-                messagebox.showerror("Image Error", f"Failed to load splash image: {e}")
+        about_window.geometry("300x100")
 
         version_label = Label(about_window, text=f"Vector Line Drawing Program\nVersion: {version.strftime('%Y-%m-%d')}")
-        version_label.pack(pady=10)
+        version_label.pack(pady=20)
 
 if __name__ == "__main__":
     loaded_file = sys.argv[1] if len(sys.argv) > 1 else None
