@@ -1,6 +1,6 @@
 Initial demo of magic erase process.
 
-To do?:
+To do:
 
 - [x] Add standard file menu items such as reloading the program (as that is so important for quickly iterating improvements to the program)
 
