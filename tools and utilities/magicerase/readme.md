@@ -20,4 +20,4 @@ To do:
 
 - [ ] Add filtering processes to detect if an image is pure black and white and if not convert it for the purpose of this program.
 
-- [ ] Add an option to process entire directories although note that locations of maskings will change from image to image so we need specical processes to allow for this.
+- [ ] Add option to process entire directories although note locations of maskings change from image to image so we need special processes to allow for this.
