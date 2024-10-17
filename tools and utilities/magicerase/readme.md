@@ -2,7 +2,9 @@ Initial demo of magic erase process.
 
 To do:
 
-- [x] Add standard file menu items such as reloading the program (as that is so important for quickly iterating improvements to the program)
+- [x] Add standard File menu Reload/Restart to allow fast iterating of improvements to the program (See Note 1)
+
+- [ ] Add MagicEraserSettings.ini file to store Preferences as well as recently used images etc.
 
 - [ ] Add option to display a checkerboard pattern rather than red in the UI.  (Partially implemented as of 2024/10/16 but works only when loading images)
 
@@ -21,3 +23,5 @@ To do:
 - [ ] Add filtering processes to detect if an image is pure black and white and if not convert it for the purpose of this program.
 
 - [ ] Add option to process entire directories although note locations of maskings change from image to image so we need special processes to allow for this.
+
+Note 1:  Restarting the program should account for any image currently loaded and reload that image as well.
