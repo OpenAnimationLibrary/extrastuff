@@ -32,4 +32,5 @@ Additional changes:
 - [x] Added Recent files listing that lists the last 10 loaded and saved files
 - [x] Added Help > About menu that contains program info and URL to github
 - [x] Scale loaded image to window
-- [x] File > Open Settings to open .ini file in operating systems default text editor 
+- [x] File > Open Settings to open .ini file in operating systems default text editor
+- [x] Added Undo / Redo with shortcut keys 
