@@ -14,7 +14,7 @@ To do?:
 
 - [ ] Add option to display a checkerboard pattern rather than red in the UI.  This should be trivial to implement but we do want to make sure the code uses the red rather than the checkerboard to create the alpha channel.
 
-- [ ] Add standard file menu items such as reloading the program (as that is so important to me for iterating improvements to the program)
+- [x] Add standard file menu items such as reloading the program (as that is so important to me for iterating improvements to the program)
 
 - [ ] Add a "debugging" option that saves a PNG image at each step of the process in sequential image format.  I've found this to be a useful feature when wanting to play back animated steps of the process and depending on what is being done by the program can produce some useful content.
 
