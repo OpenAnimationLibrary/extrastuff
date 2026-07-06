@@ -1,0 +1,54 @@
+name: Deploy MH3D Help to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "docs/MH3D_HTML_Help_Updated/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Stage MH3D HTML Help
+        run: |
+          mkdir -p _site
+
+          # Copy the actual help folder contents to the Pages web root.
+          cp -a "docs/MH3D_HTML_Help_Updated/HTML Help/." "_site/"
+
+          # GitHub Pages needs an index.html at the artifact root.
+          cp "_site/MH3D Help.html" "_site/index.html"
+
+          # Prevent Jekyll processing from interfering with static files.
+          touch "_site/.nojekyll"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
