@@ -1,0 +1,52 @@
+<MATERIALFILE>
+ProductVersion=17
+Release= PC
+<POSTEFFECTS>
+</POSTEFFECTS>
+<IMAGES>
+InstanceCropStyle=InsteadOfCache
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+<MATERIAL>
+<TURBULENCE>
+Name=CellTurb
+PluginName=Toonnation\CellTurb
+Scale=20 20 20
+<ATTRIBUTE>
+Name=Attribute
+DiffuseColor=66 35 29
+SpecularColor=252 252 252
+SpecularSize=50
+SpecularIntensity=20
+Roughness=1
+RoughnessScale=10
+</ATTRIBUTE>
+<ATTRIBUTE>
+Name=Attribute2
+DiffuseColor=70 52 37
+SpecularColor=246 246 246
+SpecularSize=20
+SpecularIntensity=10
+Roughness=10
+RoughnessScale=10
+</ATTRIBUTE>
+</TURBULENCE>
+<FileInfo>
+CreatedBy=Kevin Waldron
+Organization=Blek
+Url=http://
+Email=
+LastModifiedBy=Steffen
+</FileInfo>
+</MATERIAL>
+</MATERIALS>
+<OBJECTS>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=602
+</MATERIALFILE>

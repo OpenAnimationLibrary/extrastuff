@@ -1,0 +1,30 @@
+<MATERIALFILE>
+ProductVersion=17
+Release= PC
+<POSTEFFECTS>
+</POSTEFFECTS>
+<IMAGES>
+InstanceCropStyle=InsteadOfCache
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+<MATERIAL>
+<ATTRIBUTE>
+Name=Attribute
+AverageNormals=TRUE
+</ATTRIBUTE>
+<FileInfo>
+CreatedBy=Martin Hash
+LastModifiedBy=Steffen
+</FileInfo>
+</MATERIAL>
+</MATERIALS>
+<OBJECTS>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=244
+</MATERIALFILE>

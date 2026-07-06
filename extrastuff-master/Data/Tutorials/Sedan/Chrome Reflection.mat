@@ -1,0 +1,41 @@
+<MATERIALFILE>
+ProductVersion=17
+Release= PC
+<IMAGES>
+InstanceCropStyle=InsteadOfCache
+<STILL>
+FileName=Maps/CHROME.jpg
+<USERCONTAINER> Buffers
+<BUFFERSHORTCUT>
+ShortcutTo="Maps/CHROME.jpg"////Color
+BackgroundColor=0 0 0
+</BUFFERSHORTCUT>
+</USERCONTAINER>
+</STILL>
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+<MATERIAL>
+<ATTRIBUTE>
+Name=Environment Map
+PluginName=Hash\Environment Map
+<Bitmap>
+Value=..|..|..|Images|"Maps/CHROME.jpg"
+</Bitmap>
+Opacity=90
+</ATTRIBUTE>
+<FileInfo>
+CreatedBy=Joe Williamsen
+LastModifiedBy=Steffen
+</FileInfo>
+</MATERIAL>
+</MATERIALS>
+<OBJECTS>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=492
+</MATERIALFILE>

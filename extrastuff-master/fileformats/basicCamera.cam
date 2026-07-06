@@ -1,0 +1,44 @@
+<CAMERAFILE>
+ProductVersion=18
+Release= PC
+<POSTEFFECTS>
+</POSTEFFECTS>
+<IMAGES>
+</IMAGES>
+<SOUNDS>
+</SOUNDS>
+<MATERIALS>
+</MATERIALS>
+<OBJECTS>
+<CAMERA>
+Name=basicCamera
+End=0 0 100
+Rotate=0 0 0 1
+Length=100
+<BackgroundColor>
+Value=166 202 240
+</BackgroundColor>
+FocalLength=70
+<Format>
+Value=Targa
+</Format>
+FileName=../../../Program Files/Hash Inc/V18.0N/untitled.tga
+<Range>
+Value=FrameRange
+EndFrame=1:0
+</Range>
+<CameraFrame>
+Value=TRUE
+TVSafe=Off
+</CameraFrame>
+<FileInfo>
+LastModifiedBy=Rodney Baker
+</FileInfo>
+</CAMERA>
+</OBJECTS>
+<ACTIONS>
+</ACTIONS>
+<CHOREOGRAPHIES>
+</CHOREOGRAPHIES>
+FileInfoPos=502
+</CAMERAFILE>
