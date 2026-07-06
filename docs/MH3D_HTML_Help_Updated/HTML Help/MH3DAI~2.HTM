@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>"Aim Roll At" Constraints</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><a href="mh3dOrient_Like_Constraints.html"><img alt="Graphics/prev1.gif" border="0" src="Graphics/prev1.gif"/></a><a href="mh3dSpherical_Limits_Constraints.html"><img alt="Graphics/next1.gif" border="0" src="Graphics/next1.gif"/></a>
+<p>
+<a name="off_2819619"></a><a name="9611eba3"></a><font face="Arial" size="6"><img alt="Graphics/mh3d00000580.gif" border="0" height="74" src="Graphics/mh3d00000580.gif" width="482"/>
+<p>
+<p>
+</p></p></font><font face="Arial" size="5">The “Aim Roll At” constraint aims the roll handle of the constrained bone at
+the target bone’s pivot. 
+<p>
+<p>
+“Aim Roll At” has subtle uses that aren’t immediately apparent.  A simple
+example would be to put “Aim Roll At” on a tank turret so that as the tank travels
+along a path, its turret remains pointed at a particular target, (a simple “Aim
+At” could cause the turret to also tilt - which would be prevented with 
+Spherical Limits” constraints).  More often, “Aim Roll At” is used in conjunction
+with other constraints to prevent something from happening.  
+<p>
+<p>
+<img alt="Graphics/mh3d00000073.gif" border="0" height="41" src="Graphics/mh3d00000073.gif" width="238"/>
+<p>
+<p>
+During a loop-the-loop, an airplane constrained to a path would turn over
+partially along the path.
+<p>
+<p>
+<img alt="Graphics/mh3d00000581.gif" border="0" height="282" src="Graphics/mh3d00000581.gif" width="420"/>
+<p>
+<p>
+<p>
+<img alt="Graphics/mh3d00000582.gif" border="0" height="280" src="Graphics/mh3d00000582.gif" width="417"/>
+<p>
+<p>
+To keep the plane upside down at the top of the loop, add a null object by
+right clicking the Choreography name in the project workspace and selecting New &gt;&gt;
+Null Object. Place the null object in the center of the loop, and put an “Aim
+Roll At” constraint on the airplane.
+<p>
+<p>
+<img alt="Graphics/mh3d00000583.gif" border="0" height="267" src="Graphics/mh3d00000583.gif" width="393"/>
+<p>
+<p>
+Tell Me About:
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></font><font face="Arial" size="5"><a href="mh3dAbout_Constraints.html">About Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAim_At_Constraints.html">"Aim At" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dKinematic_Constraints.html">"Kinematic" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dPath_Constraints.html">"Path" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dTranslate_To_Constraints.html">"Translate To" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dOrient_Like_Constraints.html">"Orient Like" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dSpherical_Limits_Constraints.html">"Spherical Limits" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dBlending_Constraints.html">Blending Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dConstraint_Order.html">Constraint Order</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAnimating_Constraints.html">Animating Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dTargets.html">Targets</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dCircular_Constraints.html">Circular Constraints
+<p>
+</p></a></font><font face="Arial" size="5"></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>

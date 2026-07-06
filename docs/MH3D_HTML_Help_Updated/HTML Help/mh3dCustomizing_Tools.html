@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>Customizing Tools</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><a href="mh3dCustomize.html"><img alt="Graphics/prev1.gif" border="0" src="Graphics/prev1.gif"/></a><img alt="Graphics/next0.gif" border="0" src="Graphics/next0.gif"/>
+<p>
+<a name="off_2983065"></a><a name="14121b4e"></a><font face="Arial" size="5"><b><img alt="Graphics/mh3d00000613.gif" border="0" height="74" src="Graphics/mh3d00000613.gif" width="482"/>
+<p>
+<p>
+</p></p></b>The Options item in the Tools menu contains a window with six tabs that allow
+you to customize, or set preferences for the toolsets in the interface</font><font face="MS Sans Serif" size="3">.
+<p>
+<p>
+</p></p></font><font face="Arial" size="5"><img alt="Graphics/mh3d00000614.gif" border="0" height="300" src="Graphics/mh3d00000614.gif" width="448"/>
+<p>
+<p>
+ The Global tab on the Options dialog allows you to make changes that affect
+the way the software works.
+<p>
+<p>
+Complex models may take a long time to draw making a turn, move, zoom or 
+preview animation seem very slow. Turning on “Limit max drawing time” will allow
+interupt drawing. This means that the redraw of the screen can be interrupted
+even if the screen is not completely redrawn. There are 4 selectable drawing
+speeds.
+<p>
+<p>
+Sometimes it is necessary to limit the amount of memory allocated to the
+software for speed purposes. The renderer will save as much information in RAM as
+possible. If the amount of information becomes too large, it will begin to swap
+it out to virtual memory located on your hard drive. When this begins to occur,
+loading and saving the information needed to render can become very cumbersome
+because virtual memory is so much slower than actual RAM.   If the amount of
+RAM needed to render is below your system memory, this number can be adjusted to
+minimize swapping. If the rendering requires more RAM than you have, there is
+no choice but to let the  computer use virtual memory on your hard drive. The
+average user should never have to adjust this setting.
+<p>
+<p>
+<img alt="Graphics/mh3d00000615.gif" border="0" height="301" src="Graphics/mh3d00000615.gif" width="448"/>
+<p>
+<p>
+ The Modeling tab on the Options dialog allows you to make changes to the way
+the modeling interface looks and works. You can set Lathe preferences, grid
+sizing, etc.
+<p>
+<p>
+<img alt="Graphics/mh3d00000616.gif" border="0" height="299" src="Graphics/mh3d00000616.gif" width="444"/>
+<p>
+<p>
+ The Action tab on the Options dialog allows you to toggle the grid on and off
+in an Action window.
+<p>
+<p>
+<img alt="Graphics/mh3d00000617.gif" border="0" height="300" src="Graphics/mh3d00000617.gif" width="445"/>
+<p>
+<p>
+ The Choreography tab on the Options dialog allows you to toggle the grid that
+appears in a choreography window on and off, as well as setting the grid
+spacing.
+<p>
+<p>
+<img alt="Graphics/mh3d00000618.gif" border="0" height="302" src="Graphics/mh3d00000618.gif" width="445"/>
+<p>
+<p>
+ The Channels tab allows you to toggle the grid on and off in a channels window.
+<p>
+<p>
+<img alt="Graphics/mh3d00000619.gif" border="0" height="303" src="Graphics/mh3d00000619.gif" width="447"/>
+<p>
+<p>
+ The Rendering tab on the Options dialog allows you to make changes to the
+settings that affect rendering within the interface. These settings do not affect
+the final output at all.
+<p>
+<p>
+The Software section of the Rendering Options tab contains the options for
+non- real time rendering. When set, these options are applied to Render Mode   and
+Progressive Render Mode. They will not affect output created with the Render
+to File button.
+<p>
+<p>
+The Filter Textures option allows shadows and materials to be antialiased, and
+decals to be filtered and antialiased. This dramatically improves the quality
+of an image and also substantially increases the rendering time.
+<p>
+<p>
+The Film Grain option will apply a film grain (dithered appearance) to your
+rendered image.
+<p>
+<p>
+If Flat Shaded is selected,  rendering will have no shading. 
+<p>
+<p>
+Checking the Shadows item will include raytraced, high quality shadows in the
+rendering. This option will also substantially increase render times.
+<p>
+<p>
+The Reflections section of the Rendering Options tab contains options to allow
+reflective objects to reflect their environmment. Max levels allows you to
+specify the number of times a ray of light will reflect off an object. Adjusting
+Max Levels prevents a ray from getting caught in an infinite loop bouncing
+between reflective surfaces..  The higher the number of levels you choose, the
+longer the rendering time.
+<p>
+<p>
+The Direct 3D/QD3D section of the Rendering Options tab contains settings for
+the softwares real time rendering engine.
+<p>
+<p>
+The Driver drop down menu contains a list of drivers supported by your video
+card. RGB emulation is a software driver that uses the RAM in your system and
+does not directly utilize components of the video card. Some video cards have
+extra hardware and RAM dedicated to accelerating D3D/QD3D. If yours is one of
+these cards, an extra driver called HAL will be installed. Although HAL drivers are
+very fast, they are limited by the amount of dedicated RAM on your video card.
+If your video card has 2-4MB of RAM for D3D acceleration,  you should  select
+a lower video resolution like 800x600 and keep the number of open windows down
+to 1 or 2 if you choose to use the HAL driver.
+<p>
+<p>
+The Textures section of the Rendering Options tab contains several checkboxes. 
+<p>
+<p>
+The Show Decals checkbox will allow you to see your decals on the model when
+you are in real time rendering mode. When you edit a model,  the real time
+textures and maps must be recreated, so you may see a pause of a few seconds or even
+longer before the  textures and maps reappear, especially when previewing a
+complex model. 
+<p>
+<p>
+The Bilinear Filtering option will smooth or blur the pixelization that
+appears on objects that are very large or extremely close to the camera. Since the
+realtime renderer is a polygon based system, patches must be converted to a
+polygonal format before rendering. 
+<p>
+<p>
+The Polygons Per Patch setting allows you to choose the number of polygons you
+want each patch subdivided into. The larger the number, the smoother the edges
+of your model will appear but this will also slow down real time operation. 
+<p>
+<p>
+Finally, if you are not operating your video card in 24 bit mode, selecting
+dither will remove the banding in the shading caused by the lack of available
+colors.
+<p>
+<p>
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>

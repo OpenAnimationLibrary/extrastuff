@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>Hooks</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><a href="mh3dAdvanced_Modeling.html"><img alt="Graphics/prev1.gif" border="0" src="Graphics/prev1.gif"/></a><img alt="Graphics/next0.gif" border="0" src="Graphics/next0.gif"/>
+<p>
+<a name="off_1968255"></a><a name="050a80f8"></a><font face="Arial" size="6"><img alt="Graphics/mh3d00000423.gif" border="0" height="74" src="Graphics/mh3d00000423.gif" width="482"/>
+<p>
+<p>
+</p></p></font><font face="Arial" size="5">Modeling with patches takes talent, either latent or learned, but the results
+are worth it.  Patch models are elegant, with their low density and easy
+manipulation.  For the most part, patch modeling is simple and straight forward: you
+build pieces and start attaching them together, but you need to keep a few
+rules in mind.  Creasing occurs between two patches whose junction is ambiguous,
+meaning the renderer could not tell how to smooth between them.  Normally you can
+intervene to indicate to the renderer what to do.  3-point patches are
+especially prone to creasing, so use them sparingly.  
+<p>
+<p>
+Even 4-point patches will crease under the wrong circumstances. Creasing
+normally occurs when the artist is trying to reduce geometry but retain legal
+patches. Trying to reduce lateral splines from a region with more geometry by making
+3-point patches will almost always crease.
+<p>
+<p>
+Reducing geometry is very common: consider how complex a hand is as compared
+to a wrist; or how much more complex a face is as compared to the side of a
+head.  Because it is so common, a special facility, called “hooks”, allows you to
+butt a dead-end spline against a legal 4-point patch without turning the 4-point
+patch into an illegal 5-point patch.  A hook reduces geometry without creasing.
+<p>
+<p>
+<img alt="Graphics/mh3d00000073.gif" border="0" height="41" src="Graphics/mh3d00000073.gif" width="238"/>
+<p>
+<p>
+ In modeling an object, assume that the wireframe was worked down to a final
+opening, caused by a five point patch.
+<p>
+<p>
+<img alt="Graphics/mh3d00000424.gif" border="0" height="302" src="Graphics/mh3d00000424.gif" width="445"/>
+<p>
+Five Point Patch
+<p>
+<p>
+ To correct this hole, a spline can be added to the lower control point, and
+hooked into the middle of the upper spline:
+<p>
+<p>
+<img alt="Graphics/mh3d00000425.gif" border="0" height="303" src="Graphics/mh3d00000425.gif" width="447"/>
+<p>
+<p>
+ The control point that will form a hook is attached to the center of a spline
+just as it would be attached to another control point. Hold the control point
+to be hooked over the center of a spline, and with the left mouse button down,
+click the right mouse button.
+<p>
+<p>
+With the hook in place, the hole will render as follows:
+<p>
+<p>
+<img alt="Graphics/mh3d00000426.gif" border="0" height="304" src="Graphics/mh3d00000426.gif" width="444"/>
+<p>
+<p>
+ To remove a hook, group it with one of the grouping tools, and press the
+Delete key.
+<p>
+<p>
+Since one of the goals of real-time modeling is to keep the number of patches
+at a minimum, hooks are ideal for eliminating redundant splines that are
+present for no other reason than to reduce creasing.
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>

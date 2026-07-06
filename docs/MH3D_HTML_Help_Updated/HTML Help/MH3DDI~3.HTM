@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>Displacement/Fractal Map</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><a href="mh3dCookiecut_Map.html"><img alt="Graphics/prev1.gif" border="0" src="Graphics/prev1.gif"/></a><img alt="Graphics/next0.gif" border="0" src="Graphics/next0.gif"/>
+<p>
+<a name="off_1377331"></a><a name="1b693262"></a><font face="Arial" size="6"><img alt="Graphics/mh3d00000348.gif" border="0" height="74" src="Graphics/mh3d00000348.gif" width="482"/>
+<p>
+<p>
+</p></p></font><font face="Arial" size="5">Bump maps are sufficient for most applications but they lose the illusion of
+bumpiness along the object’s profile since no “bumps” actually exist. 
+Displacement maps actually affect the object’s surface, making real “bumps” but they are
+computationally and memory expensive, and are also more difficult to control. 
+Sometimes, however, true surface perturbation is required, justifying the use
+of Displacement maps. 256 shade grayscale images are ideal for displacement
+maps, (only the “red” component of a color picture affects displacement maps).  
+<p>
+However, contrary to Bump maps, the gray value determines the amount of
+displacement, (Bump maps look for changes in value rather than the value itself): “0”
+being no displacement, while “255” equals 255 units of displacement (the same
+units used by the rest of the program). The color “black” (0,0,0) does not
+displace the surface.  Similarly, the transparent Background color, and pixels with
+transparent Alpha components cause no surface perturbation.
+<p>
+The “Value” of displacement will raise or lower the displacement by the
+specified percent.  Negative values will cause the displacement to occur in the
+opposite direction. Displacement maps work best with small values of deformation,
+(large spikes shade unnaturally and look incongruous).  As a model scales, so
+does its displacement.
+<p>
+Fractal maps are simply displacements that flat shade the facets of
+perturbation as if they were polygons, whereas Displacement maps shade exactly like Bump
+maps, (Displacement maps can be thought of as Bump maps with true profile
+deformation).  Displacement/Fractal maps dynamically subdivide the patches they are
+applied to, limited to 64 subdivision per patch.  For more detail, large
+patches may have to be constructed out of many smaller patches: for example, four
+patches will provide up to 256 subdivisions for displacement.
+<p>
+<p>
+Related Topics:
+<p>
+</p></p></p></p></p></p></font><font face="Arial" size="5"><a href="mh3dColor_Map.html">Color Maps
+<p>
+</p></a><a href="mh3dTransparency_Map.html">Transparency Maps</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dBump_Map.html">Bump Map</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dSpecular_Map.html">Specularity Map</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dDiffuse_Map.html">Diffuse Map</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dReflection_Map.html">Reflectivity Map</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAmbience_Map.html">Ambiance Map</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dCookiecut_Map.html">Cookiecut Map</a></font><font face="Arial" size="5">
+<p>
+<p>
+</p></p></font><font face="MS Sans Serif" size="3"></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>

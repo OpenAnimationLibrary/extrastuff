@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>Dopesheet File Format</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><a href="mh3dLoading_Dopesheets.html"><img alt="Graphics/prev1.gif" border="0" src="Graphics/prev1.gif"/></a><img alt="Graphics/next0.gif" border="0" src="Graphics/next0.gif"/>
+<p>
+<a name="off_1737335"></a><a name="c44c8226"></a><font face="MS Sans Serif" size="3"><h1><img alt="Graphics/mh3d00000399.gif" border="0" height="73" src="Graphics/mh3d00000399.gif" width="480"/>
+<p>
+<p>
+</p></p></h1></font><font face="Arial" size="5">Dopesheet files are created outside MH3D, either with a text editor or with a
+utility program.  They are simply ASCII text files that contain a list of Pose
+names and frame numbers. When a Dopesheet is applied to a model, the software
+uses the Pose name to find the appropriate Pose embedded in the model.  If a
+Pose is not found, it will be ignored.  It is, therefore, very important to choose
+Pose names carefully and consistently.  You will likely want to use a standard
+set of phoneme mouth shape poses for doing lip sync.
+<p>
+<p>
+Dopesheet files (*.DPS) have the following format.  They start with a
+[DOPESHEETFILE] and end with a [ENDDOPESHEETFILE].  The middle is comprised of
+Dopeframe definitions which start with [DOPEFRAME], and end with [ENDDOPEFRAME].  The
+following example shows a Dopesheet with two dopeframes, one telling frame 1 to
+use Pose1, and the other telling frame 15 to use Pose2.</p></p></font><font face="MS Sans Serif" size="4">
+<p>
+<p>
+</p></p></font><font face="Arial" size="4">[DOPESHEETFILE]
+<p>
+[DOPEFRAME]
+<p>
+Name=pose1
+<p>
+Frame=1
+<p>
+[ENDDOPEFRAME]
+<p>
+[DOPEFRAME]
+<p>
+Name=pose2
+<p>
+Frame=15
+<p>
+[ENDDOPEFRAME]
+<p>
+[ENDDOPESHEETFILE]
+<p>
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></font><font face="Arial" size="5">Related Topics:
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAbout_Dopesheets.html">About Dopesheets</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dLoading_Dopesheets.html">Loading Dopesheets</a></font><font face="Arial" size="5">
+<p>
+<p>
+</p></p></font><font face="MS Sans Serif" size="3"></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>

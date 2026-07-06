@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>Frame Toolbar</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><a href="mh3dSnap_Manipulator_to_Grid.html"><img alt="Graphics/prev1.gif" border="0" src="Graphics/prev1.gif"/></a><a href="mh3dEmbedding_Options.html"><img alt="Graphics/next1.gif" border="0" src="Graphics/next1.gif"/></a>
+<p>
+<a name="off_2655602"></a><a name="2204e319"></a><font face="Arial" size="6"><img alt="Graphics/mh3d00000556.gif" border="0" height="74" src="Graphics/mh3d00000556.gif" width="482"/>
+<p>
+<p>
+</p></p></font><font face="Arial" size="5"><img alt="Graphics/mh3d00000557.gif" border="0" height="62" src="Graphics/mh3d00000557.gif" width="744"/>
+<p>
+<p>
+The Frame bar contains many key mode buttons which are used during any keying
+operation.  For example, in selecting Copy from the Edit menu of a Choreography
+window, these key mode states depict what elements of the selected object are
+copied.  If you then select a different object and choose Paste from the Edit
+menu, the states of the key mode buttons depict which of the elements stored in
+the Paste Buffer would actually be applied to the   selected object.
+<p>
+<p>
+Any operation that retrieves keyframe data from an object or applies keyframe
+data to an object uses these key mode states.  These operations are Cut, Copy,
+Paste, Create Pose, Drop Pose onto an Action, Make Key Frame, Delete Key Frame,
+Next Key Frame, Previous Key Frame, and Move Frames.
+<p>
+<p>
+A description of the buttons from left to right on the toolbar follows:
+<p>
+<p>
+<b>Key Skeletal Translations:
+<p>
+</p></b>This button allows bone translation values to be retrieved or added depending
+on the operation being performed.
+<p>
+<p>
+<b>Key Skeletal Scaling:
+<p>
+</p></b>This button allows bone scaling values to be retrieved or added depending on
+the operation being performed.
+<p>
+<p>
+<b>Key Skeletal Rotation:
+<p>
+</p></b>This button allows bone rotational values to be retrieved or added depending
+on the operation being performed.
+<p>
+<p>
+<b>Key Constraints:
+<p>
+</p></b>This button allows bone constraints to be retrieved or added depending on the
+operation being performed. For example, if you had a camera which had an Aim-At
+Constraint and you selected Copy from the Edit menu, then selected a light and
+chose Paste from the Edit menu, the light would receive an Aim-At Constraint
+if it did not already have one,  plus all channel items (example: Enforcement
+value) from the original constraint would be inserted for the particular frame.
+<p>
+<p>
+<b>Key Muscle:
+<p>
+</p></b>If the Key Muscle button is down during a keying operation, muscle motion is
+retrieved or applied during a keying operation.
+<p>
+<p>
+<b>Key Bone:
+<p>
+</p></b>The Key Bone button only allows keying operation on the Selected Bone.  For
+example, if the Elbow bone is the selected bone and you choose Copy from the Edit
+menu, only the data for the Elbow bone will be copied.  If you then advanced
+frames, and chose Paste from the Edit menu with the Elbow still selected, the
+Elbow would  be the only bone to have data applied to it whether or not this
+button is selectected, because the paste buffer only containts that information.
+<p>
+<p>
+<b>Key Branch:
+<p>
+</p></b>Key Branch allows keying operations for the selected bone and all of its
+descendants.
+<p>
+<p>
+<b>Key Model:
+<p>
+</p></b>Key Model performs the key operation on the entire model.  For example, if you
+select Copy from the Edit menu of an Action window,  every bone in the model
+will be included in the Copy operation.
+<p>
+<p>
+<b>Key Other:
+<p>
+</p></b>When the Key Other button is down, any other channel items contained in that
+object will also be keyed.  For example, if you had a light selected in a
+Choreography and chose Copy from the Edit menu,  then select a different light and
+chose Paste from the Edit menu, the Red, Green, Blue, Intensity, Width, Fall Off,
+Cone Angle, and Softness would be applied on the new light.  
+<p>
+<p>
+However, if you chose to paste the light information on a camera instead of a
+Light, only common channel item data would be applied, which in this case would
+be none of them.  Paste applies data based on the name of the channel item, so
+if the object being pasted to has matching channel item names, the Paste
+buffer will be applied to that  channel item.
+<p>
+<p>
+When a paste buffer is created, it stores the Channel items values depicted by
+the Key Mode State buttons for the current frame.  Bone names are also stored.
+ 
+<p>
+If  multiple bone data is in the Paste buffer, the paste will apply the paste
+buffer by matching the bone names in the paste buffer to the bone names in the
+selected object.  For example, if you had the Elbow bone selected in an object
+with Key Branch turned on and you chose Copy from the Edit menu, the paste
+buffer would contain data for the Elbow, Wrist, and Fingers.  If you pasted this
+data onto an object which only had a Wrist bone, only that bones information will
+be applied.  
+<p>
+<p>
+Remember that if you were pasting this same data onto an object that had
+Elbow, Wrist, and Finger bones, and you wanted it applied to all three bones, the
+Key Mode buttons must allow these three bones to receive the data (either Key
+Model, or Key branch).
+<p>
+<p>
+If information for only one bone is in the Paste buffer, and you paste the
+data onto a single bone (Key Bone is on, or Key Branch with a selected bone that
+has no children is on),  name matching for the bone will not be used.  For
+example, if you select the Elbow and have Key Bone turned on and choose Copy from
+the Edit menu,  then select the Wrist and choose Paste from the Edit menu, the
+paste buffer will be applied to the Wrist even though the names are different. 
+This is a very powerful feature if you remember that Pasting uses bone name
+matching to apply data, except when a one to one bone Copy,  then Paste function is
+being performed.
+<p>
+<p>
+<b>Frame Scrub:
+<p>
+</p></b>The frame scrubber allows you to quickly change between frames while viewing
+your animation. Turning on Interrupt drawing from the Options panel Global Tab
+will allow the frames to interrupt before they draw completely,  giving this
+feature a more tactile feel.
+<p>
+<p>
+<b>Previous \ Next Key Fame:
+<p>
+</p></b>This allows you to change frames to the next or previous key frame depicted by
+the states of the Key Mode Buttons.
+<p>
+<p>
+<b>Previous \ Next Frame:
+<p>
+</p></b>This will increment or decrement the current frame number.
+<p>
+<p>
+<b>Frame Edit Box:
+<p>
+</p></b>This box contains the current frame number.  You can also type in a new frame
+number here.
+<p>
+<p>
+Other Advanced Navigating Topics:
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></font><font face="Arial" size="5"><a href="mh3dLibraries.html">Libraries</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dStatus_Bar_View_Controls.html">Status Bar View Controls</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dCreate_Icon.html">Create Icon</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dWorld_Space.html">World Space
+<p>
+</p></a><a href="mh3dSnap_Manipulator_to_Grid.html">Snap Manipulator to Grid</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dEmbedding_Options.html">Embedding Options
+<p>
+<p>
+</p></p></a></font><font face="Arial" size="5"></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Link Not Active</title>
+<link rel="stylesheet" href="mh3d-help.css">
+</head>
+<body>
+<header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav class="site-nav" aria-label="Help navigation"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<section class="page-intro"><h1>Link Not Active</h1><p>The requested destination is not available in this help edition.</p></section>
+<div class="warning"><strong id="recovery-title">This link is not active.</strong><br><span id="recovery-detail">The original topic or service could not be restored or is no longer available.</span></div>
+<p>The surrounding help material has been preserved, but this destination cannot be opened safely from the archive.</p>
+<p><a class="button-link" href="MH3D Help.html">Return to Main Contents</a><a class="button-link" href="mh3dindex.html">Open the Index</a><a class="button-link" id="source-link" href="MH3D Help.html">Return to Previous Help Page</a></p>
+<noscript><p>JavaScript is disabled, so the unavailable destination name cannot be shown. Use the links above to continue browsing.</p></noscript>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var target = params.get('target');
+  var from = params.get('from');
+  if (target) {
+    document.getElementById('recovery-title').textContent = '“' + target + '” is not active.';
+    document.getElementById('recovery-detail').textContent = 'The original link was unavailable, obsolete, or could not be restored in this edition.';
+  }
+  if (from && !/^(?:[a-z]+:|\/\/)/i.test(from) && !from.includes('..')) {
+    document.getElementById('source-link').setAttribute('href', from);
+  } else {
+    document.getElementById('source-link').textContent = 'Return to Main Contents';
+  }
+})();
+</script>
+</main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer>
+</body>
+</html>

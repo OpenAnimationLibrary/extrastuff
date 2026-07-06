@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>Targets</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><a href="mh3dAnimating_Constraints.html"><img alt="Graphics/prev1.gif" border="0" src="Graphics/prev1.gif"/></a><a href="mh3dCircular_Constraints.html"><img alt="Graphics/next1.gif" border="0" src="Graphics/next1.gif"/></a>
+<p>
+<a name="off_2919061"></a><a name="982c86c2"></a><font face="Arial" size="6"><img alt="Graphics/mh3d00000606.gif" border="0" height="74" src="Graphics/mh3d00000606.gif" width="482"/>
+<p>
+<p>
+</p></p></font><font face="Arial" size="5">Your most useful constraint combinations consist of “Translate To”, “Aim At”,
+and “Orient Like”, which often use target bones.  Targets usually don’t render,
+instead they are only used to help you is creating actions.  Targets can be
+cameras, lights, bones, or paths.  Target bones can be in the choreography’s
+hierarchy at the root level, making them independent of the movement of any other
+bone, (or they can be in the hierarchy at a different level).  Therefore the 
+Left Hand Target” bone can “Translate To” a waving tree branch in a choreography,
+then the “Left Hand” can “Aim At” the target bone.  As the character walks
+towards the tree branch, the left hand will look to be grabbing for the tree
+branch, eventually touching it if the character gets close enough, (the target is
+not part of the character’s hierarchy so it stays with the tree branch).
+<p>
+<p>
+Most character hierarchies include feet, and knee targets, that may or may not
+be used during the animation, but are used enough to be convenient.  Feet
+targets are located at the root level of the model’s hierarchy, and can have the
+calf bone “Kinematic” constrained to them, (when used).  In this manner, wherever
+the feet targets go, the body will bend appropriately to meet (via inverse
+kinematics).  Therefore feet can remain fixed firmly to the floor.  The knee
+targets are located at the pelvis level of the hierarchy, and remain in front of the
+character so that the thighs can “Aim At” them, thereby influencing the
+kinematics for more natural motion.
+<p>
+<p>
+Since constraints are controlled by channels, and a channel matches
+relationships with frames, a character can be made to perform any kind of convoluted,
+interactive action without feet or hands slipping. The constraints using targets
+would need to be turned on and off with the channels so that any kind of
+animation could be performed: keyframe, kinematic or constrained, during the action.
+<p>
+<p>
+Tell Me About:
+<p>
+</p></p></p></p></p></p></p></font><font face="Arial" size="5"><a href="mh3dAbout_Constraints.html">About Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAim_At_Constraints.html">"Aim At" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dKinematic_Constraints.html">"Kinematic" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dPath_Constraints.html">"Path" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dTranslate_To_Constraints.html">"Translate To" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dOrient_Like_Constraints.html">"Orient Like" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAim_Roll_At_Constraints.html">"Aim Roll At" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dSpherical_Limits_Constraints.html">"Spherical Limits" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dBlending_Constraints.html">Blending Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dConstraint_Order.html">Constraint Order</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAnimating_Constraints.html">Animating Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dCircular_Constraints.html">Circular Constraints
+<p>
+</p></a></font><font face="Arial" size="5"></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>

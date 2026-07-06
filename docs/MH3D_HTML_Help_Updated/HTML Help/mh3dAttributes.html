@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>Attributes</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><img alt="Graphics/prev0.gif" border="0" src="Graphics/prev0.gif"/><a href="mh3dCombiners.html"><img alt="Graphics/next1.gif" border="0" src="Graphics/next1.gif"/></a>
+<p>
+<a name="off_1443895"></a><a name="f99f1e1f"></a><font face="Arial" size="5"><h1><img alt="Graphics/mh3d00000363.gif" border="0" height="74" src="Graphics/mh3d00000363.gif" width="482"/>
+<p>
+</p></h1>The most used and si</font><font color="#000000" face="Arial" size="5">mplest class of material is just an attribute.  Attributes are simply base
+colors that are mixed together in different ways to get a pattern.  Attributes
+also contain all the standard attribute information like ambiance, transparency,
+roughness, specularity, mirror, and refraction.
+<p>
+<p>
+</p></p></font><font face="Arial" size="5">The Properties Panel for Attributes looks like this:
+<p>
+<p>
+</p></p></font><font color="#000000" face="Arial" size="5"><img alt="Graphics/mh3d00000364.gif" border="0" height="207" src="Graphics/mh3d00000364.gif" width="367"/>
+<p>
+<p>
+The fields on the Properties Panel are empty to designate no entry. If no
+value is entered in any field, the software will use the value from the Base
+Attribute of the model (which is set by clicking the model name in the Project
+Workspace, then making any desired changes to the values on the Properties Panel).
+<p>
+<p>
+The following is a list of available options and descriptions of each.
+<p>
+<p>
+<b>COLOR
+<p>
+</p></b>Upon clicking the Color option on the Properties Panel, a standard system
+color palette will appear, as shown in figure 1.
+<p>
+<p>
+<img alt="Graphics/mh3d00000365.gif" border="0" height="210" src="Graphics/mh3d00000365.gif" width="364"/>
+<p>
+</p></p></p></p></p></p></p></p></p></font><font color="#000000" face="Arial" size="4">Figure 1
+<p>
+<p>
+</p></p></font><font color="#000000" face="Arial" size="5">You can select a color by clicking on it, or click the </font><font color="#000000" face="Times New Roman" size="5">“</font><font color="#000000" face="Arial" size="5">Other</font><font color="#000000" face="Times New Roman" size="5">”</font><font color="#000000" face="Arial" size="5"> button to open a full palette color picker. With the full palette open,
+numerical entries can be made directly into the Red, Green, and Blue fields. Custom
+color sets can also be designed. 
+<p>
+<p>
+<b>SPECULARITY
+<p>
+</p></b>Specularity is the highlight from a light source you get on an object.  The
+default specular color is the color of the light source causing the highlight.
+The Specular Color option allows you to change the color of the highlight that
+appears on an object.
+<p>
+<p>
+The specular size can range from 0 to 100.  The default is 0, meaning no
+highlight at all.  The higher the value, the larger the specular highlight.
+<p>
+<p>
+Specular Intensity controls the intensity of the specular highlight. Intensity
+can range from 0 to 100. 
+<p>
+<p>
+<img alt="Graphics/mh3d00000366.gif" border="0" height="104" src="Graphics/mh3d00000366.gif" width="500"/>
+<p>
+<p>
+<b>REFLECTIVITY
+<p>
+</p></b>Setting a Reflectivity value above 0 causes the object to have reflections of
+the surrounding objects in it.  A value of 100% means that the segment is
+totally reflective and will add the color of the surrounding objects to it's own
+color.
+<p>
+<p>
+<img alt="Graphics/mh3d00000367.gif" border="0" height="140" src="Graphics/mh3d00000367.gif" width="540"/>
+<p>
+<p>
+<b>AMBIANCE
+<p>
+</p></b>Ambiance is a value that determines the brightness of an object when no light
+is hitting it.  A value of 0 would indicate the material is black when in
+shadow, where a value of 100 would mean it had all the intensity of it's original
+color.  A high ambiance makes objects appear as if they are self illuminating.
+<p>
+<p>
+<img alt="Graphics/mh3d00000368.gif" border="0" height="101" src="Graphics/mh3d00000368.gif" width="500"/>
+<p>
+<p>
+<b>ROUGHNESS
+<p>
+</p></b>Roughness is a turbulence function that perturbs the surface of your objects. 
+The default Height value is 0, causing the object to be perfectly smooth.  The
+larger the Height value, the rougher the surface gets. The scale value
+controls the size of the roughness.
+<p>
+<p>
+<img alt="Graphics/mh3d00000369.gif" border="0" height="106" src="Graphics/mh3d00000369.gif" width="500"/>
+<p>
+<p>
+<b>TRANSPARENCY
+<p>
+</p></b>To make an object be partially see through, use transparency.  A value of 0
+would mean the material is totally opaque. A value of 100 would mean the object
+is fully transparent.
+<p>
+The renderer has two methods of computing transparency, Additive and
+Multiplicative.  To set the method you wish to use, click the appropriate Transparency
+Method radio button.
+<p>
+<p>
+Using 50% Transparency as an example, here is the way the renderer computes
+the two transparency methods:
+<p>
+<p>
+ Additive:  The renderer will take the color of the material and add 50% of
+the color that lies behind the object (setting a material to 100% transparency
+does not necessarily make it invisible, unless the object color is black and it
+has no specularity.  As a matter of fact, the color will never get dimmer than
+the original object color, only brighter because colors are always added to it).
+<p>
+Multiplicitive:  The renderer will take 50% of the objects color and 50% of
+the color that lies behind the object and add the resulting colors together.
+<p>
+<p>
+<img alt="Graphics/mh3d00000370.gif" border="0" height="100" src="Graphics/mh3d00000370.gif" width="500"/>
+<p>
+<p>
+<b>REFRACTION
+<p>
+</p></b>Refraction is the bending of light as it passes through a transparent object. 
+The default value is 0, meaning no refraction. A material must have some
+transparency for the refraction value to be used.
+<p>
+<p>
+<img alt="Graphics/mh3d00000371.gif" border="0" height="101" src="Graphics/mh3d00000371.gif" width="500"/>
+<p>
+<p>
+Related Topics:
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></font><font face="Arial" size="5"><a href="mh3dAbout_Materials.html">About Materials</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dCombiners.html">Combiners</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dTurbulence.html">Turbulence</a></font><font face="Arial" size="5">
+<p>
+</p></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>

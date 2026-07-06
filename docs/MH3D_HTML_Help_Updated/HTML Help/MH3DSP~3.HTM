@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/>
+<title>"Spherical Limits" Constraints</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/><link href="mh3d-help.css" rel="stylesheet"/></head><body><header class="site-header"><div class="site-header-inner">
+<div class="site-title">MH3D / Animation:Master Help<span class="site-subtitle">Recovered historical reference with updated navigation</span></div>
+<nav aria-label="Help navigation" class="site-nav"><a href="MH3D Help.html">Contents</a><a href="mh3dindex.html">Index</a><a href="mh3dAbout_this_Help_File.html">About this edition</a><a href="mh3dTechnical_Support.html">Current resources</a></nav>
+</div></header><main class="help-content">
+<a href="MH3D Help.html"><img alt="Graphics/contents.gif" border="0" src="Graphics/contents.gif"/></a><a href="mh3dindex.html"><img alt="Graphics/index.gif" border="0" src="Graphics/index.gif"/></a><a href="mh3dAim_Roll_At_Constraints.html"><img alt="Graphics/prev1.gif" border="0" src="Graphics/prev1.gif"/></a><a href="mh3dBlending_Constraints.html"><img alt="Graphics/next1.gif" border="0" src="Graphics/next1.gif"/></a>
+<p>
+<a name="off_2851157"></a><a name="f99080da"></a><font face="Arial" size="6"><img alt="Graphics/mh3d00000584.gif" border="0" height="74" src="Graphics/mh3d00000584.gif" width="482"/>
+<p>
+<p>
+</p></p></font><font face="Arial" size="5">Spherical Limits are the most common constraint because most bones have their
+freedom of movement restricted in some manner: for example, your elbows do not
+bend backwards.  Spherical Limits also help you while you are animating because
+as you drag a character’s arm, the elbow won’t bend backwards, (so you don’t
+have to adjust it later).
+<p>
+<p>
+When you first add spherical constraints to a figure in an action or pose, its
+constraints are set to completely free.  A completely free bone is
+accomplished by allowing longitude to run anywhere from -180 to 180° (creating a full 360°
+movement sphere). 
+<p>
+ Pictorially, this means that were the figure in the center of the Earth, the
+bone is allowed to point towards any of the vertically oriented time zones. In
+addition, the Latitude is allowed to go from 0 (straight down to the South
+Pole), to 180° (straight up to the North Pole). Figure 1 shows an unconstrained
+movement sphere. The Properties Panel is included for reference.
+<p>
+<p>
+<img alt="Graphics/mh3d00000585.gif" border="0" height="423" src="Graphics/mh3d00000585.gif" width="431"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000586.gif" border="0" height="206" src="Graphics/mh3d00000586.gif" width="363"/>
+<p>
+<p>
+<b>Latitude Constraints: </b>By constraining the Latitude, a bones ability to move up and down its sphere
+is restricted.  For example, possible constraints for a thigh would be to leave
+Longitude -180 to 180°, and restrict Latitude to 0-45°. Now the leg may lift up
+in any direction, but may only lift up 45°. It can lift 45° in front, back, at
+the right or left side. This creates a vertical cone of freedom. See figure 2.
+The Properties Panel and a view of the leg raised up to the spherical
+constraint are included for reference.
+<p>
+<img alt="Graphics/mh3d00000587.gif" border="0" height="420" src="Graphics/mh3d00000587.gif" width="434"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000588.gif" border="0" height="206" src="Graphics/mh3d00000588.gif" width="363"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000589.gif" border="0" height="267" src="Graphics/mh3d00000589.gif" width="443"/>
+<p>
+ A characters upper arms can be constrained in exactly this fashion. Latitude
+can be set at 0-95°, allowing them to move the entire southern hemisphere, plus
+5° further. In this case, the southern hemisphere is not straight down, rather
+it is to the right for the right arm since the bone is oriented in the arm
+horizontally. See Figure 3. The Properties Panel was included for reference.
+<p>
+<img alt="Graphics/mh3d00000590.gif" border="0" height="434" src="Graphics/mh3d00000590.gif" width="423"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000591.gif" border="0" height="206" src="Graphics/mh3d00000591.gif" width="363"/>
+<p>
+<p>
+Latitude may also be restricted both Min and Max. For example, a bone can be
+constrained to point only at the sun belt, say from 60-135°.  See Figure 4.
+<p>
+<p>
+<img alt="Graphics/mh3d00000592.gif" border="0" height="428" src="Graphics/mh3d00000592.gif" width="437"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000593.gif" border="0" height="206" src="Graphics/mh3d00000593.gif" width="363"/>
+<p>
+<p>
+<b>Longitude Constraints
+<p>
+</p></b>By default, longitude constraints are -180 to 180°. Looking down on the
+movement sphere (using the face of a clock for reference), the 0° position is
+straight towards the back (6 o’clock). The positive 90° position is counter clockwise
+to the left (3 o’clock), the positive 180° position is towards the front (12
+o’clock), and the 270° (or -90°) position is at the right (9 o’clock).  When
+setting Longitude constraints, values from -360 to 360° may be used provided that
+the defined sphere is equal to or less than 360° total. This extra space is
+needed to set constrained regions which cross over 0°.
+<p>
+<p>
+To constrain a calf, it is necessary to limit movements on the back side of
+the movement sphere.  By leaving the Latitude at its default 0 to 180°, the calf
+may point anywhere from straight down to straight up.  By setting the Longitude
+constraints from -5 to 5°, the calf must stay in a 10° wide strip towards the
+back.  See Figure 5. The Properties Panel was included for reference.
+<p>
+<img alt="Graphics/mh3d00000594.gif" border="0" height="431" src="Graphics/mh3d00000594.gif" width="430"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000595.gif" border="0" height="206" src="Graphics/mh3d00000595.gif" width="363"/>
+<p>
+ The Min and Max values of -5 and 5° will not show up at all if the calf is
+positioned straight down. (The South Pole is the South Pole no matter what time
+zone you are in) If you move the bone up higher, say a Latitude of 80°, then -5
+to 5° Longitude constraints will be easily visible.
+<p>
+<p>
+<b>Latitude and Longitude Constraints: </b>Because it is impossible for a person to move their calf all the way straight
+up, the above constraint would be more realistic if we set the Max Latitude to
+140°.  See Figure 6.
+<p>
+<img alt="Graphics/mh3d00000596.gif" border="0" height="423" src="Graphics/mh3d00000596.gif" width="429"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000597.gif" border="0" height="206" src="Graphics/mh3d00000597.gif" width="363"/>
+<p>
+<b>Negative Latitude Values:
+<p>
+</p></b>Many people can hyper extend their knee joint and allow their calf to angle
+past straight down.  Usually, the legal range for Min Latitude is 0 to 180°. 
+However, if a narrow Longitude region (less than 180°) is specified, as in the
+previous calf example (only 10°), then negative values of Min Latitude are
+allowed.  The negative Min Latitude allows the calf to extend to the opposite side of
+the movement sphere, in this case the front, as many degrees as you wish. 
+Assuming our figure has extremely flexible knee joints, we could specify Latitude
+constraints of -10 to 140°.  Now our region extends past the bottom of the
+sphere.  See Figure 7.
+<p>
+<img alt="Graphics/mh3d00000598.gif" border="0" height="422" src="Graphics/mh3d00000598.gif" width="426"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000599.gif" border="0" height="206" src="Graphics/mh3d00000599.gif" width="363"/>
+<p>
+<p>
+ Careful observation of the figure showing the calf constraints above will
+reveal that at the bottom of the movement sphere (the South Pole), the constraint
+region does not get narrow to a point like a bow tie.  A wider example makes
+this more apparent.  For instance, assume Longitude constraints of 60 to 120°.
+(See Top View Diagram) Suppose latitude values are from -45 to 90°.  The positive
+Latitude constraint (90) is allowed on the side of the sphere that the
+Longitude constraints specify.  The negative Latitude constraint (-45) is allowed
+directly across (60+180 to 120+180 = 240 to 300°).  Connecting these limits by two
+vertical planes creates a wide patch region in which positioning is allowed. 
+This situation is worth mentioning because often in a Pose or Action, longitude
+values outside 60-120° and 240 to 300° will be allowed to permit motion in this
+region.
+<p>
+<p>
+<img alt="Graphics/mh3d00000600.gif" border="0" height="436" src="Graphics/mh3d00000600.gif" width="432"/>
+<p>
+<p>
+<img alt="Graphics/mh3d00000601.gif" border="0" height="206" src="Graphics/mh3d00000601.gif" width="363"/>
+<p>
+<p>
+ The previously discussed four constraint numbers, allow many different
+constrained regions to be defined.  The Roll axis of a bone can also be constrained,
+with values ranging from -180 to 180<b>°.
+<p>
+<p>
+</p></p></b><img alt="Graphics/mh3d00000602.gif" border="0" height="501" src="Graphics/mh3d00000602.gif" width="565"/>
+<p>
+<p>
+Tell Me About:
+<p>
+</p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></font><font face="Arial" size="5"><a href="mh3dAbout_Constraints.html">About Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAim_At_Constraints.html">"Aim At" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dKinematic_Constraints.html">"Kinematic" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dPath_Constraints.html">"Path" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dTranslate_To_Constraints.html">"Translate To" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dOrient_Like_Constraints.html">"Orient Like" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAim_Roll_At_Constraints.html">"Aim Roll At" Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dBlending_Constraints.html">Blending Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dConstraint_Order.html">Constraint Order</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dAnimating_Constraints.html">Animating Constraints</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dTargets.html">Targets</a></font><font face="Arial" size="5">
+<p>
+</p></font><font face="Arial" size="5"><a href="mh3dCircular_Constraints.html">Circular Constraints
+<p>
+</p></a></font><font face="Arial" size="5"></font></p></main><footer class="site-footer">Historical help content recovered and modernized in July 2026. Screen images, commands, and terminology may differ from current Animation:Master releases.</footer></body>
+</html>
