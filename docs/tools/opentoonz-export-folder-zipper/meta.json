@@ -1,0 +1,41 @@
+{
+  "id": "opentoonz_export_folder_zipper",
+  "name": "OpenToonz Export Folder Zipper",
+  "shortDescription": "Package an OpenToonz Export Scene folder into a shareable ZIP file directly in your browser.",
+  "description": "A browser-only utility that takes the folder created by OpenToonz Export > Export Scene, preserves its structure, summarizes likely OpenToonz contents, and generates a downloadable ZIP plus SHA-256 receipt. Files stay local and are not uploaded to a server.",
+  "tags": [
+    "OpenToonz",
+    "Export Scene",
+    "ZIP",
+    "Troubleshooting",
+    "Project Sharing",
+    "Browser Tool"
+  ],
+  "searchKeywords": [
+    "opentoonz",
+    "export scene",
+    "zip",
+    "folder zipper",
+    "scene package",
+    "troubleshooting",
+    "project handoff",
+    "tlv",
+    "tnz",
+    "tpl"
+  ],
+  "manual": "Use OpenToonz Export > Export Scene first. Then select the exported folder in this tool, review the summary, create the ZIP, and download the result for sharing or troubleshooting.",
+  "author": "Open Animation Library / Rodney Baker",
+  "version": "0.1.0",
+  "license": "MIT",
+  "aiModel": "GPT-5.5 Thinking",
+  "promptLicense": "CC0-1.0",
+  "promptUrl": "",
+  "referencedOSS": [
+    {
+      "name": "JSZip",
+      "url": "https://stuk.github.io/jszip/",
+      "license": "MIT"
+    }
+  ],
+  "referenceArticles": []
+}
