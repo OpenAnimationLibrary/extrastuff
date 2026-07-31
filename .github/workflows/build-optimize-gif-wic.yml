@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'tools/OptimizeGifWic/payload/**'
+      - 'tools/OptimizeGifWic/patches/**'
       - '.github/workflows/build-optimize-gif-wic.yml'
   workflow_dispatch:
 
@@ -43,6 +44,12 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "tar.exe failed with exit code $LASTEXITCODE" }
           if (-not (Test-Path "$destination\src\main.cpp")) {
             throw 'Source payload did not materialize correctly.'
+          }
+          $patches = Get-ChildItem -LiteralPath "$destination\patches" -Filter '*.patch' -ErrorAction SilentlyContinue | Sort-Object Name
+          foreach ($patch in $patches) {
+            Write-Host "Applying $($patch.Name)"
+            git apply --whitespace=nowarn $patch.FullName
+            if ($LASTEXITCODE -ne 0) { throw "git apply failed for $($patch.Name)" }
           }
 
       - name: Configure Release x64
