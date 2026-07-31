@@ -1,0 +1,13 @@
+diff --git a/tools/OptimizeGifWic/CMakeLists.txt b/tools/OptimizeGifWic/CMakeLists.txt
+--- a/tools/OptimizeGifWic/CMakeLists.txt
++++ b/tools/OptimizeGifWic/CMakeLists.txt
+@@ -14,8 +14,7 @@ endif()
+ 
+ add_executable(OptimizeGifWic
+     src/main.cpp
+-    resources/OptimizeGifWic.rc
+-    resources/app.manifest)
++    resources/OptimizeGifWic.rc)
+ 
+ set_target_properties(OptimizeGifWic PROPERTIES
+     OUTPUT_NAME "OptimizeGifWic"
