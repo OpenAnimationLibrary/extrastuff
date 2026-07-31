@@ -30,7 +30,13 @@ jobs:
           if (-not $parts) { throw 'No source payload parts were found.' }
           $text = ($parts | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw }) -join ''
           [IO.File]::WriteAllBytes($archive, [Convert]::FromBase64String(($text -replace '\s', '')))
-          Expand-Archive -LiteralPath $archive -DestinationPath $destination -Force
+          $expectedHash = '7b6c8a9029cbc2c3b0d31637bf4c300592ed9e83202683ff047645d800c33a35'
+          $actualHash = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($actualHash -ne $expectedHash) {
+            throw "Source payload hash mismatch. Expected $expectedHash, received $actualHash."
+          }
+          tar.exe -xf $archive -C $destination
+          if ($LASTEXITCODE -ne 0) { throw "tar.exe failed with exit code $LASTEXITCODE" }
           if (-not (Test-Path "$destination\src\main.cpp")) {
             throw 'Source payload did not materialize correctly.'
           }
