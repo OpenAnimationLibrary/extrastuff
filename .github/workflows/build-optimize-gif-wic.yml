@@ -28,6 +28,10 @@ jobs:
           $archive = Join-Path $env:RUNNER_TEMP 'OptimizeGifWic-project.zip'
           $parts = Get-ChildItem -LiteralPath $payloadDirectory -Filter 'part*.txt' | Sort-Object Name
           if (-not $parts) { throw 'No source payload parts were found.' }
+          foreach ($part in $parts) {
+            $partHash = (Get-FileHash -LiteralPath $part.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
+            Write-Host ("PAYLOAD_PART {0} bytes={1} sha256={2}" -f $part.Name, $part.Length, $partHash)
+          }
           $text = ($parts | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw }) -join ''
           [IO.File]::WriteAllBytes($archive, [Convert]::FromBase64String(($text -replace '\s', '')))
           $expectedHash = '7b6c8a9029cbc2c3b0d31637bf4c300592ed9e83202683ff047645d800c33a35'
