@@ -1,0 +1,127 @@
+name: Build OptimizeGifWic
+
+on:
+  pull_request:
+    paths:
+      - 'tools/OptimizeGifWic/payload/**'
+      - 'tools/OptimizeGifWic/patches/**'
+      - '.github/workflows/build-optimize-gif-wic.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-test-package:
+    name: Windows x64 build, test, and dependency audit
+    runs-on: windows-2022
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+
+      - name: Materialize source package
+        shell: pwsh
+        run: |
+          $payloadDirectory = 'tools\OptimizeGifWic\payload'
+          $destination = 'tools\OptimizeGifWic'
+          $archive = Join-Path $env:RUNNER_TEMP 'OptimizeGifWic-project.zip'
+          $parts = Get-ChildItem -LiteralPath $payloadDirectory -Filter 'part*.txt' | Sort-Object Name
+          if (-not $parts) { throw 'No source payload parts were found.' }
+          foreach ($part in $parts) {
+            $partHash = (Get-FileHash -LiteralPath $part.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
+            Write-Host ("PAYLOAD_PART {0} bytes={1} sha256={2}" -f $part.Name, $part.Length, $partHash)
+          }
+          $text = ($parts | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw }) -join ''
+          [IO.File]::WriteAllBytes($archive, [Convert]::FromBase64String(($text -replace '\s', '')))
+          $expectedHash = '7b6c8a9029cbc2c3b0d31637bf4c300592ed9e83202683ff047645d800c33a35'
+          $actualHash = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($actualHash -ne $expectedHash) {
+            throw "Source payload hash mismatch. Expected $expectedHash, received $actualHash."
+          }
+          tar.exe -xf $archive -C $destination
+          if ($LASTEXITCODE -ne 0) { throw "tar.exe failed with exit code $LASTEXITCODE" }
+          if (-not (Test-Path "$destination\src\main.cpp")) {
+            throw 'Source payload did not materialize correctly.'
+          }
+          $patches = Get-ChildItem -LiteralPath "$destination\patches" -Filter '*.patch' -ErrorAction SilentlyContinue | Sort-Object Name
+          foreach ($patch in $patches) {
+            Write-Host "Applying $($patch.Name)"
+            git apply --whitespace=nowarn $patch.FullName
+            if ($LASTEXITCODE -ne 0) { throw "git apply failed for $($patch.Name)" }
+          }
+
+      - name: Configure Release x64
+        shell: pwsh
+        run: cmake -S tools/OptimizeGifWic -B build/OptimizeGifWic -A x64 -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build Release x64
+        shell: pwsh
+        run: cmake --build build/OptimizeGifWic --config Release --parallel
+
+      - name: Run Windows integration tests
+        shell: pwsh
+        run: >-
+          powershell -NoProfile -ExecutionPolicy Bypass
+          -File tools/OptimizeGifWic/tests/RunTests.ps1
+          -ExePath build/OptimizeGifWic/Release/OptimizeGifWic.exe
+          -Configuration Release
+          -ResultsPath build/OptimizeGifWic/TEST_RESULTS.txt
+
+      - name: Audit imported DLLs
+        shell: pwsh
+        run: |
+          $vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio\Installer\vswhere.exe'
+          $vs = (& $vswhere -latest -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath | Select-Object -First 1).Trim()
+          if (-not $vs) { throw 'Visual Studio C++ tools were not found.' }
+          $versionFile = Join-Path $vs 'VC\Auxiliary\Build\Microsoft.VCToolsVersion.default.txt'
+          $toolsVersion = (Get-Content -LiteralPath $versionFile -Raw).Trim()
+          $dumpbin = Join-Path $vs "VC\Tools\MSVC\$toolsVersion\bin\Hostx64\x64\dumpbin.exe"
+          if (-not (Test-Path -LiteralPath $dumpbin)) { throw "dumpbin was not found: $dumpbin" }
+          $exe = (Resolve-Path 'build\OptimizeGifWic\Release\OptimizeGifWic.exe').Path
+          $audit = (Resolve-Path 'build\OptimizeGifWic').Path + '\DEPENDENCIES.txt'
+          & $dumpbin /headers /dependents $exe | Out-File -LiteralPath $audit -Encoding utf8
+          if ($LASTEXITCODE -ne 0) { throw "dumpbin failed with exit code $LASTEXITCODE" }
+          Get-Content -LiteralPath $audit
+          $forbidden = Select-String -LiteralPath $audit -Pattern 'VCRUNTIME\d*\.DLL|MSVCP\d*\.DLL|ucrtbase\.dll|avcodec|avformat|avutil|swscale|ffmpeg' -CaseSensitive:$false
+          if ($forbidden) {
+            $forbidden | ForEach-Object { Write-Error $_.Line }
+            throw 'Dependency audit found a dynamic MSVC runtime or FFmpeg-related import.'
+          }
+
+      - name: Stage release package
+        shell: pwsh
+        run: |
+          $tool = 'tools\OptimizeGifWic'
+          Remove-Item "$tool\tests\_work" -Recurse -Force -ErrorAction SilentlyContinue
+          $packageRoot = 'build\OptimizeGifWic\package'
+          $stage = Join-Path $packageRoot 'OptimizeGifWic_v0.0.1_Windows_x64'
+          New-Item -ItemType Directory -Path $stage -Force | Out-Null
+          New-Item -ItemType Directory -Path "$stage\source" -Force | Out-Null
+          Copy-Item 'build\OptimizeGifWic\Release\OptimizeGifWic.exe' $stage
+          Copy-Item "$tool\README.md", "$tool\LICENSE", "$tool\THIRD_PARTY_NOTICES.txt" $stage
+          Copy-Item "$tool\docs", "$tool\installer" $stage -Recurse
+          Copy-Item "$tool\src", "$tool\resources", "$tool\tests" "$stage\source" -Recurse
+          Copy-Item "$tool\CMakeLists.txt", "$tool\build_release.ps1", "$tool\build_release.cmd" "$stage\source"
+          Copy-Item 'build\OptimizeGifWic\TEST_RESULTS.txt' "$stage\docs\TEST_RESULTS_WINDOWS_2022.txt"
+          Copy-Item 'build\OptimizeGifWic\DEPENDENCIES.txt' "$stage\docs\DEPENDENCIES_WINDOWS_2022.txt"
+          $exeHash = Get-FileHash "$stage\OptimizeGifWic.exe" -Algorithm SHA256
+          "OptimizeGifWic.exe  $($exeHash.Hash.ToLowerInvariant())" | Set-Content "$stage\SHA256SUMS.txt" -Encoding ascii
+          $zip = 'build\OptimizeGifWic\OptimizeGifWic_v0.0.1_Windows_x64.zip'
+          Compress-Archive -LiteralPath $stage -DestinationPath $zip -CompressionLevel Optimal -Force
+          $zipHash = Get-FileHash $zip -Algorithm SHA256
+          "OptimizeGifWic_v0.0.1_Windows_x64.zip  $($zipHash.Hash.ToLowerInvariant())" | Set-Content 'build\OptimizeGifWic\PACKAGE_SHA256.txt' -Encoding ascii
+
+      - name: Upload tested Windows package
+        uses: actions/upload-artifact@v4
+        with:
+          name: OptimizeGifWic-v0.0.1-Windows-x64
+          path: |
+            build/OptimizeGifWic/OptimizeGifWic_v0.0.1_Windows_x64.zip
+            build/OptimizeGifWic/Release/OptimizeGifWic.exe
+            build/OptimizeGifWic/PACKAGE_SHA256.txt
+            build/OptimizeGifWic/TEST_RESULTS.txt
+            build/OptimizeGifWic/DEPENDENCIES.txt
+          if-no-files-found: error
+          retention-days: 14
